@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const models = require('../models');
+const models = require('../models/Users');
 const {jwtSecret} = require('../config');
 const jwt = require('jsonwebtoken');
 const md5 = require('md5');
@@ -12,7 +12,7 @@ router.post('/login', async (req, res, next) => {
   try {
     const {username, password} = req.body;
     if (username && password) {
-      const user = await models.Users.findOne({
+      const user = await models.findOne({
         where: {
           username: username,
           password: md5(password)

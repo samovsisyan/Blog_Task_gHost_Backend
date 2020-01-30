@@ -7,7 +7,7 @@ const sequelize = new Sequelize(database, user, password, {
     host,
     dialect: "mysql",
     timestamps: false,
-    operatorsAliases
+    operatorsAliases: false,
 });
 
 module.exports = sequelize;
