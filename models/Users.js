@@ -46,7 +46,7 @@ Users.init({
 
     },
     role: {
-        type: Sequelize.ENUM('admin', 'manager', 'payer'),
+        type: Sequelize.ENUM('admin', 'manager'),
         allowNull: false,
     }
 
