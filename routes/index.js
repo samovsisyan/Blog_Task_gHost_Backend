@@ -7,9 +7,10 @@ const express = require('express');
 const router = express.Router();
 
 router.use('/blog', require('./blog'));
+router.use('/users', require('./users'));
 
-router.get('/blog', function(req, res, next) {
-  res.render('Hello');
-});
+// router.get('/blog', function(req, res, next) {
+//   res.render('Hello');
+// });
 module.exports = router;
 

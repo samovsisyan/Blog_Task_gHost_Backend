@@ -4,7 +4,7 @@ const express = require('express');
 
 const router = express.Router();
 
-
+/* GET blog listing. */
 router.get('/', async (req, res, next) => {
     try {
         const blog = await models.findAll();

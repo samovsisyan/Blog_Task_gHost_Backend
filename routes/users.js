@@ -1,9 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const Sequelize = require('sequelize');
+const models = require('../models/Users');
+const express = require('express');
+
+const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', async (req, res, next) => {
+    try {
+        const users = await models.findAll();
+        res.json({
+            status: 'ok',
+            users,
+        })
+    } catch (e) {
+        next(e)
+    }
 });
 
 module.exports = router;
