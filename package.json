@@ -7,10 +7,12 @@
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
+    "concurrently": "^5.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.0.1",
-    "express": "^4.16.4",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
     "express-react-views": "^0.11.0",
     "http-errors": "~1.6.3",
     "jsx": "^0.9.89",
@@ -21,6 +23,7 @@
     "pug": "^2.0.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "sequelize": "^5.21.3"
   }
 }

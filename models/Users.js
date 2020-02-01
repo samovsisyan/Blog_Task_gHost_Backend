@@ -33,11 +33,15 @@ Users.init({
         unique: 'email'
 
     },
-    
     role: {
         type: Sequelize.ENUM('admin', 'user'),
         allowNull: false,
-    }
+    },
+    // slug: {
+    //     type: Sequelize.STRING,
+    //     allowNull: false
+    //
+    // }
 
 }, {
     sequelize,
