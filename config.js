@@ -6,6 +6,5 @@ module.exports = {
         password: 'root',
         database: 'blog_task_gHost'
     },
-    jwtSecret: '01--5152asdsa1d2sa1d5sa'
 };
 
