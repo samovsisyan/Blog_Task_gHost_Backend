@@ -1,6 +1,8 @@
-module.exports = {
-  users: require('./users'),
-  blog: require('./blog'),
+var express = require('express');
+var router = express.Router();
 
+router.get('/', function(req, res, next) {
+    res.render('Home', { title: 'Express' });
+});
 
-};
+module.exports = router;

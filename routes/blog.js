@@ -1,16 +1,13 @@
-const express = require('express');
-const router = express.Router();
+const Sequelize = require('sequelize');
 const models = require('../models/Blog');
+const express = require('express');
+
+const router = express.Router();
 
 
-
-
-/* GET users listing. */
 router.get('/', async (req, res, next) => {
-
     try {
         const blog = await models.findAll();
-        console.log(blog);
         res.json({
             status: 'ok',
             blog,
