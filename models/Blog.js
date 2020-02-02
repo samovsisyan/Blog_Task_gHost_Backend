@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../services/database');
-
 class Blog extends Sequelize.Model{
 
 }
@@ -41,6 +40,5 @@ Blog.init({
 });
 
 Blog.sync();
-
 
 module.exports = Blog;
