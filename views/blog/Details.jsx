@@ -6,7 +6,7 @@ class Details extends React.Component {
 
     render() {
         const {data} = this.props;
-
+        console.log()
         return (
             <Wrapper>
                 <div>
@@ -20,7 +20,6 @@ class Details extends React.Component {
                         <input type="hidden" name="blog_id" value={data.id}/>
                         <button>Comments</button>
                     </form>
-
 
                 </div>
             </Wrapper>

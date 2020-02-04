@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../services/database');
+
+
 class Blog extends Sequelize.Model{
+
+
 
 }
 
@@ -40,12 +44,7 @@ Blog.init({
         type: Sequelize.STRING,
         allowNull: false
 
-    },
-    comments: {
-        type: Sequelize.STRING,
-        allowNull: false
-
-    },
+    }
 
 
 }, {

@@ -14,50 +14,50 @@ const router = express.Router();
 //         });
 // });
 // //
-// router.get('/', async (req, res, next) => {
-//     try {
-//         const blog = await models.findAll({});
-//
-//
-//         res.render('blog/Blog', {blog: blog});
-//     } catch (e) {
-//         next(e)
-//     }
-// });
-//
-//
-// router.get('/details/:id', async (req, res, next) => {
-//     try {
-//         const {id} = req.params;
-//         const data = await models.findOne(
-//             {
-//                 where: {
-//                     id: id
-//                 }});
-//
-//         res.render('blog/Details', {data: data});
-//     } catch (e) {
-//         next(e)
-//     }
-// });
-
-
-
-
-
-
 router.get('/', async (req, res, next) => {
     try {
-        const blog = await models.findAll();
-        res.json({
-            status: 'ok',
-            blog,
-        })
+        const blog = await models.findAll({});
+
+
+        res.render('blog/Blog', {blog: blog});
     } catch (e) {
         next(e)
-
     }
 });
+
+
+router.get('/details/:id', async (req, res, next) => {
+    try {
+        const {id} = req.params;
+        const data = await models.findOne(
+            {
+                where: {
+                    id: id
+                }});
+
+        res.render('blog/Details', {data: data});
+    } catch (e) {
+        next(e)
+    }
+});
+
+
+
+
+
+
+// router.get('/', async (req, res, next) => {
+//     try {
+//         const blog = await models.findAll();
+//         res.json({
+//             status: 'ok',
+//             blog,
+//         })
+//     } catch (e) {
+//         next(e)
+//
+//     }
+// });
 
 
 
@@ -87,7 +87,7 @@ router.put('/', async (req, res, next) => {
 });
 
 
-router.post('/', async (req, res, next) => {
+router.post('/create', async (req, res, next) => {
     try {
         const {
             id,

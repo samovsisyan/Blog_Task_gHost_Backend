@@ -15,8 +15,13 @@ const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.post('/comment', urlencodedParser, function (req, res) {
+  console.log(req.params,55555555555555)
+
   res.send(req.body)
 });
+
+
+
 
 // app.use(bodyParser.urlencoded({ extended: false }))
 // app.use(bodyParser.json())
