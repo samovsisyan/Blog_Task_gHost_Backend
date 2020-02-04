@@ -4,24 +4,33 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const allowOrigin = require('./middleware/allowOrigin');
+const indexRouter = require('./routes/index');
 const bodyParser = require('body-parser');
 
 
-
-
-
-
-const indexRouter = require('./routes/index');
-
 const app = express();
 
+const jsonParser = bodyParser.json()
 
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.post('/comment', urlencodedParser, function (req, res) {
+  res.send(req.body)
+})
+
+// app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.json())
+
+
+// app.use('/comment' , function (req, res) {
+//   console.log(req.body);
+//   res.end(JSON.stringify(req.body, {qs: "hello"}));
+// })
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
-app.use(bodyParser());
 app.use(allowOrigin);
 app.use(logger('dev'));
 app.use(express.json());

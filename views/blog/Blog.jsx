@@ -83,7 +83,7 @@ class Blog extends React.Component {
                     }
 
 
-                    <form action="/comments" method="POST">
+                    <form action="/comment" method="POST">
                         <input type="text" name="username"/>
                         <button>Comments</button>
                     </form>

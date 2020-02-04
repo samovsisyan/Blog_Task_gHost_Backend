@@ -14,7 +14,10 @@ class Details extends React.Component {
 
                     <h2> {data.description} </h2>
 
-
+                    <form action="/comment" method="POST">
+                        <input type="text" name="comments" />
+                        <button>Comments</button>
+                    </form>
 
                 </div>
             </Wrapper>
