@@ -31,6 +31,21 @@ Blog.init({
         allowNull: false
 
     },
+    created_at: {
+        type: Sequelize.STRING,
+        allowNull: false,
+
+    },
+    img: {
+        type: Sequelize.STRING,
+        allowNull: false
+
+    },
+    comments: {
+        type: Sequelize.STRING,
+        allowNull: false
+
+    },
 
 
 }, {

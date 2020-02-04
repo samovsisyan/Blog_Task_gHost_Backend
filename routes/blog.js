@@ -1,8 +1,10 @@
 const Sequelize = require('sequelize');
 const models = require('../models/Blog');
 const express = require('express');
-
 const router = express.Router();
+
+
+
 
 /* GET blog listing. */
 // router.get('/:id', async (req, res, next) => {
@@ -11,37 +13,51 @@ const router = express.Router();
 //             blog
 //         });
 // });
-//
-// router.get('/',  async (req, res, next) => {
-//     try {
-//         const blog =  models.findAll();
-//         res.render('blog/Blog', {blog: blog});
-//     } catch (e) {
-//         next(e)
-//     }
-// });
-
-
-// router.get('/add', function (req, res, next) {
-//     res.render('blog/Form');
-// });
-
-
-
+// //
 router.get('/', async (req, res, next) => {
     try {
+        const blog = await models.findAll({});
 
 
-        const blog = await models.findAll();
-        res.json({
-            status: 'ok',
-            blog,
-        })
+        res.render('blog/Blog', {blog: blog});
     } catch (e) {
         next(e)
-
     }
 });
+
+
+router.get('/details/:id', async (req, res, next) => {
+    try {
+        const {id} = req.params;
+        const data = await models.findOne(
+            {
+                where: {
+                    id: id
+                }});
+
+        res.render('blog/Details', {data: data});
+    } catch (e) {
+        next(e)
+    }
+});
+
+
+
+
+
+
+// router.get('/', async (req, res, next) => {
+//     try {
+//         const blog = await models.findAll();
+//         res.json({
+//             status: 'ok',
+//             blog,
+//         })
+//     } catch (e) {
+//         next(e)
+//
+//     }
+// });
 
 
 
