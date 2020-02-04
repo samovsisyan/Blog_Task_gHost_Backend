@@ -26,10 +26,6 @@ router.get('/', function(req, res, next) {
   res.render('Home', { title: 'Express' });
 });
 
-router.get('/blog', function(req, res, next) {
-  res.render('blog/Blog');
-});
-
 
 
 

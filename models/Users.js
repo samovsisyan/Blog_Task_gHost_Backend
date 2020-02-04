@@ -20,12 +20,12 @@ Users.init({
     password: {
         type: Sequelize.STRING,
         allowNull: false,
-        get() {
-            return undefined
-        },
-        set(val) {
-            return md5(val)
-        }
+        // get() {
+        //     return undefined
+        // },
+        // set(val) {
+        //     return md5(val)
+        // }
     },
     email: {
         type: Sequelize.STRING,
