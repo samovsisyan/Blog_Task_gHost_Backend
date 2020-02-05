@@ -29,13 +29,19 @@ router.get('/', async (req, res, next) => {
 router.get('/details/:id', async (req, res, next) => {
     try {
         const {id} = req.params;
-        const data = await models.findOne(
+        const blog = await models.findOne(
             {
                 where: {
                     id: id
                 }});
 
-        res.render('blog/Details', {data: data});
+        const comments = await models.findOne(
+            {
+                where: {
+                    blog_id: id
+                }});
+
+        res.render('blog/Details', {blog: blog, comments:comments});
     } catch (e) {
         next(e)
     }

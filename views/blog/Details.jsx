@@ -5,21 +5,30 @@ class Details extends React.Component {
 
 
     render() {
-        const {data} = this.props;
-        console.log()
+        const {comments, blog} = this.props;
         return (
             <Wrapper>
                 <div>
-                    <h1> {data.title} </h1>
+                    <h1> {blog.title} </h1>
 
-                    <h2> {data.description} </h2>
+                    <h2> {blog.description} </h2>
 
 
-                    <form action="/comment" method="POST">
-                        <input type="text" name="username"/>
-                        <input type="hidden" name="blog_id" value={data.id}/>
+                    <form action="/comments" method="POST">
+                        <input type="text" name="description"/>
+                        <input type="hidden" name="blog_id" value={blog.id}/>
+                        <input type="hidden" name="user_id" value="1"/>
                         <button>Comments</button>
                     </form>
+
+
+                    { comments.map((comment) => (
+                           <div>
+                               <p>{comment.description}</p>
+                           </div>
+                            )
+                        )
+                    }
 
                 </div>
             </Wrapper>

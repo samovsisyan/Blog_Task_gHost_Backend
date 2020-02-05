@@ -65,13 +65,7 @@ const Wrapper = require('../Wrapper');
 
 class Blog extends React.Component {
 
-        // static state = {
-        //     conmments
-        // }
 
-    // handelChange = () => {
-    //
-    // }
 
     render() {
         const {blog} = this.props;

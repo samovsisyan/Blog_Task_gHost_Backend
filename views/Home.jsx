@@ -6,7 +6,7 @@ class Home extends React.Component {
     render() {
         return (
             <Wrapper>
-
+                <h1>Hello</h1>
             </Wrapper>
         )
     }

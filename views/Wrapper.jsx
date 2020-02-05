@@ -1,11 +1,16 @@
-const React = require('react');
+// const React = require('react');
 
-class Wrapper extends React.Component {
+import React, { Component } from 'react';
+// const {Link} = require("react-router-dom").Link;
+import { Link } from 'react-router-dom';
+// import '../public/stylesheets/style.css';
+
+class Wrapper extends Component {
     render() {
         return (
             <html>
             <head>
-                <meta charSet="utf8"/>
+                <meta charSet="utf8" />
                 <title>{this.props.title}</title>
 
 
@@ -13,13 +18,14 @@ class Wrapper extends React.Component {
             <body>
             {this.props.children}
 
+            <h1>Wrapper</h1>
 
-                <h1>hgfthjkliouyt</h1>
+
+
+
             </body>
             </html>
-        )
-    }
+  )
+ }
 }
-
-
-module.exports = Wrapper
+module.exports = Wrapper;
