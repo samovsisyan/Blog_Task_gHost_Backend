@@ -12,7 +12,7 @@ const app = express();
 
 
 // const jsonParser = bodyParser.json()
-
+//
 // const urlencodedParser = bodyParser.urlencoded({ extended: false })
 //
 // app.post('/comment', urlencodedParser, function (req, res) {

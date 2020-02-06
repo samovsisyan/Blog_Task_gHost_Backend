@@ -6,8 +6,8 @@ class Details extends React.Component {
 
     render() {
         const {blog, comments } = this.props;
-        console.log(blog,5555555555555555555555555555555);
-        console.log(comments,7777777777777777777777777777777);
+        console.log(blog,);
+        console.log(comments,);
         return (
             <Wrapper>
                 <div>
@@ -18,7 +18,7 @@ class Details extends React.Component {
 
 
 
-                    <form action="/comment" method="POST">
+                    <form action="/comments" method="POST">
                         <input type="text" name="description"/>
                         <input type="hidden" name="blog_id" value={blog.id}/>
                         <input type="hidden" name="user_id" value="1"/>

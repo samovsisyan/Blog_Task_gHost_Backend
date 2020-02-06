@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const models = require('../models/Blog');
 const express = require('express');
 const router = express.Router();
-const comment = require('../models/Comments');
+const comments = require('../models/Comments');
 
 
 
@@ -29,10 +29,10 @@ router.get('/details/:id', async (req, res, next) => {
                     id: id
                 }});
 
-        const comments = await comment.findOne(
+        const comments = await models.findOne(
             {
                 where: {
-                    blog_id: id,
+                    id: id,
                 }});
 
         res.render('blog/Details', {blog: blog, comments:comments });

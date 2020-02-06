@@ -21,7 +21,7 @@ const router = express.Router();
 
 router.use('/blog', require('./blog'));
 router.use('/users', require('./users'));
-router.use('/comments', require('./comments'));
+  // router.use('/comments', require('./comments'));
 
 
 router.get('/', function(req, res, next) {
