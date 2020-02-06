@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/', async (req, res, next) => {
     try {
-        const {description, blog_id, user_id} = req.body;
+        const {description, user_id, blog_id} = req.body;
 
         // console.log('description - ' + description);
         // console.log('blog_id -' + blog_id);
@@ -18,15 +18,13 @@ router.post('/', async (req, res, next) => {
             blog_id,
         });
 
-        res.send({status: "ok"})
+        res.send('Success!')
 
     } catch (e) {
         next(e)
 
     }
 });
-
-
 
 
 module.exports = router;

@@ -59,17 +59,14 @@
 //
 // export default Blog;
 
-
 const React = require('react');
 const Wrapper = require('../Wrapper');
 
 class Blog extends React.Component {
 
-
-
     render() {
-        const {blog} = this.props;
-
+        const {blog, comments} = this.props;
+        console.log(this.props,77777777777777777777777)
         return (
             <Wrapper>
                 <div>
@@ -84,6 +81,11 @@ class Blog extends React.Component {
                             )
                         )
                     }
+
+
+
+
+
 
 
 

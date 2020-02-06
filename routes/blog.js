@@ -2,18 +2,12 @@ const Sequelize = require('sequelize');
 const models = require('../models/Blog');
 const express = require('express');
 const router = express.Router();
+const comment = require('../models/Comments');
 
 
 
 
 /* GET blog listing. */
-// router.get('/:id', async (req, res, next) => {
-//         const blog = await models.findAll();
-//         res.render('blog/Blog', {
-//             blog
-//         });
-// });
-// //
 router.get('/', async (req, res, next) => {
     try {
         const blog = await models.findAll({});
@@ -35,13 +29,13 @@ router.get('/details/:id', async (req, res, next) => {
                     id: id
                 }});
 
-        const comments = await models.findOne(
+        const comments = await comment.findOne(
             {
                 where: {
-                    blog_id: id
+                    blog_id: id,
                 }});
 
-        res.render('blog/Details', {blog: blog, comments:comments});
+        res.render('blog/Details', {blog: blog, comments:comments });
     } catch (e) {
         next(e)
     }
@@ -52,12 +46,14 @@ router.get('/details/:id', async (req, res, next) => {
 
 
 
+
+
+
 // router.get('/', async (req, res, next) => {
 //     try {
 //         const blog = await models.findAll();
 //         res.json({
-//             status: 'ok',
-//             blog,
+//            blog,
 //         })
 //     } catch (e) {
 //         next(e)

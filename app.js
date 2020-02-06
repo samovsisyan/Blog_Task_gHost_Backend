@@ -6,28 +6,19 @@ const logger = require('morgan');
 const allowOrigin = require('./middleware/allowOrigin');
 const indexRouter = require('./routes/index');
 const bodyParser = require('body-parser');
-const mime = require('mime-types');
 
 
 const app = express();
 
 
+// const jsonParser = bodyParser.json()
 
-app.use(express.static('www'));
-
-
-
-const jsonParser = bodyParser.json()
-
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
-
-app.post('/comment', urlencodedParser, function (req, res) {
-  console.log(req.params,55555555555555)
-
-  res.send(req.body)
-});
-
-
+// const urlencodedParser = bodyParser.urlencoded({ extended: false })
+//
+// app.post('/comment', urlencodedParser, function (req, res) {
+//   console.log(req.params,55555555555555)
+//   res.send(req.body);
+// });
 
 
 // app.use(bodyParser.urlencoded({ extended: false }))
@@ -58,21 +49,16 @@ app.use(function(req, res, next) {
 });
 
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", '*');
-  res.header("Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Accept, Content-Type, Authorization");
-
-  if (req.method === "OPTIONS") {
-    res.header("Access-Control-Allow-Methods", "POST, PATCH, PUT, GET, DELETE, OPTIONS");
-    return res.status(200).json({});
-  }
-});
-
-
-
-
-
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", '*');
+//   res.header("Access-Control-Allow-Headers",
+//       "Origin, X-Requested-With, Accept, Content-Type, Authorization");
+//
+//   if (req.method === "OPTIONS") {
+//     res.header("Access-Control-Allow-Methods", "POST, PATCH, PUT, GET, DELETE, OPTIONS");
+//     return res.status(200).json({});
+//   }
+// });
 
 
 

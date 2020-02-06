@@ -5,20 +5,10 @@ class Comments extends React.Component {
 
 
     render() {
-        const {comment} = this.props;
-
         return (
             <Wrapper>
                 <div>
-                    {
-                        comment.map((comment) => (
-                                <div>
-                                    <h2><a href={`comments/Comments/${comment.id}`}>{comment.comments} </a></h2>
-
-                                </div>
-                            )
-                        )
-                    }
+                    <h1>  hello</h1>
 
 
 
