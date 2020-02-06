@@ -141,7 +141,7 @@ class Wrapper extends React.Component {
                 <div className="site-section">
                     <div className="container">
                         <div className="half-post-entry d-block d-lg-flex bg-light">
-                            <div className="img-bg">style="background-image: url('images/big_img_1.jpg')"</div>
+                            <div className="img-bg" style={{backgroundImage: 'url(images/big_img_1.jpg)'}}></div>
                             <div className="contents">
                                 <span className="caption">Editor's Pick</span>
                                 <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
@@ -166,7 +166,7 @@ class Wrapper extends React.Component {
                 <div className="site-section">
                     <div className="container">
                         <div className="half-post-entry d-block d-lg-flex bg-light">
-                            <div className="img-bg" >style="background-image: url('images/big_img_1.jpg')"</div>
+                            <div className="img-bg" style={{backgroundImage: 'url(images/big_img_1.jpg)'}}></div>
                             <div className="contents">
                                 <span className="caption">Editor's Pick</span>
                                 <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
@@ -207,7 +207,7 @@ class Wrapper extends React.Component {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="post-entry-1">
-                                    <Link to="post-single.html"><img src="images/img_h_1.jpg" alt="Image"
+                                    <Link to="post-single.html" ><img src="images/img_h_1.jpg" alt="Image"
                                                                      className="img-fluid" /></Link>
                                     <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
                                         Where They Are</Link></h2>
@@ -224,7 +224,8 @@ class Wrapper extends React.Component {
                             </div>
                             <div className="col-md-6">
                                 <div className="post-entry-2 d-flex bg-light">
-                                    <div className="thumbnail" >style="background-image: url('images/img_v_1.jpg')"</div>
+                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_1.jpg)'}} >
+                                        </div>
                                     <div className="contents">
                                         <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
                                             Where They Are</Link></h2>
@@ -238,7 +239,7 @@ class Wrapper extends React.Component {
                                 </div>
 
                                 <div className="post-entry-2 d-flex">
-                                    <div className="thumbnail">style="background-image: url('images/img_v_2.jpg')"</div>
+                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_2.jpg)'}}></div>
                                     <div className="contents">
                                         <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
                                             Where They Are</Link></h2>
@@ -252,7 +253,7 @@ class Wrapper extends React.Component {
                                 </div>
 
                                 <div className="post-entry-2 d-flex">
-                                    <div className="thumbnail">style="background-image: url('images/img_v_3.jpg')"</div>
+                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_3.jpg)'}}></div>
                                     <div className="contents">
                                         <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
                                             Where They Are</Link></h2>
