@@ -8,17 +8,16 @@ router.post('/', async (req, res, next) => {
     try {
         const {description, user_id, blog_id} = req.body;
 
-        // console.log('description - ' + description);
-        // console.log('blog_id -' + blog_id);
-        // console.log('user_id -' + user_id);
-
         await models.create({
             description,
             user_id,
             blog_id,
         });
 
-        res.send('Success!')
+        res.send({
+            status: "ok",
+            message: "create comments"
+        })
 
     } catch (e) {
         next(e)
