@@ -9,7 +9,7 @@ class Details extends React.Component {
     render() {
         const {blog, comments} = this.props;
         console.log(blog, 11111111111111111111111111111111111111111111111111112222222222222222222233333333333333333333);
-        console.log(comments,);
+        console.log(comments.length, 44444444444444444444444444);
         return (
             <Wrapper>
 
@@ -68,23 +68,23 @@ class Details extends React.Component {
 
                                         <div className="pt-5">
                                             <div className="section-title">
-                                                <h2 className="mb-5">6 Comments</h2>
+                                                <h2 className="mb-5">{comments.length} Comments</h2>
                                             </div>
                                             <ul className="comment-list">
                                                 <li className="comment">
                                                     <div className="vcard bio">
-                                                        <img src="images/person_1.jpg" alt="Image placeholder"/>
+                                                        <img src="/images/person_1.jpg" />
                                                     </div>
                                                     <div className="comment-body">
-                                                        <h3>Jean Doe</h3>
-                                                        <div className="meta">January 9, 2018 at 2:21pm</div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                            Pariatur
-                                                            quidem laborum necessitatibus, ipsam impedit vitae autem,
-                                                            eum
-                                                            officia, fugiat saepe enim sapiente iste iure! Quam voluptas
-                                                            earum
-                                                            impedit necessitatibus, nihil?</p>
+                                                        {comments.map((comment) => (
+                                                            <div>
+                                                                <h3>{comment.name}</h3>
+                                                                <div className="meta">January 9, 2018 at 2:21pm</div>
+
+                                                                <p>{comment.description}</p>
+                                                            </div>
+                                                        ))}
+
                                                         <p><Link to="#" className="reply">Reply</Link></p>
                                                     </div>
 
@@ -101,12 +101,14 @@ class Details extends React.Component {
                                                 <form action="/comments" method="POST" className="p-5 bg-light">
                                                     <div className="form-group">
                                                         <label htmlFor="name">Name *</label>
-                                                        <input type="text" name="name" className="form-control" id="name"/>
+                                                        <input type="text" name="name" className="form-control"
+                                                               id="name"/>
                                                     </div>
                                                     <div className="form-group">
                                                         <label htmlFor="message">Message</label>
                                                         <textarea name="" id="message" cols="30" rows="10"
-                                                                  name="description" className="form-control"></textarea>
+                                                                  name="description"
+                                                                  className="form-control"></textarea>
                                                         <input type="hidden" name="blog_id" value={blog.id}/>
                                                         <input type="hidden" name="user_id" value="1"/>
                                                         <button onclick="redirect()" value="Redirect">Comments</button>
