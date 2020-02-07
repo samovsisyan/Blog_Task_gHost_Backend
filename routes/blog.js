@@ -13,7 +13,11 @@ router.get('/', async (req, res, next) => {
         const blog = await models.findAll({});
 
 
+<<<<<<< HEAD
         res.render('pages/Section',{blog: blog});
+=======
+        res.render('pages/Section', {blog: blog});
+>>>>>>> 9c5560692d242eee09fdfdbe0124b29a377bf5ff
     } catch (e) {
         next(e)
     }

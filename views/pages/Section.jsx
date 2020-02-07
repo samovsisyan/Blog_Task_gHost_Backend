@@ -16,10 +16,17 @@ class Section extends React.Component {
         console.log(blog_reversed, 5555555555555555555555);
         // style = {{width: "1284px"}}
         // style={{transform: `translate3d(${-3852}px, ${0}px, ${0}px)`,  transition: `${all} 1s ${ease} 0s`, `width: ${7704}px`}}
+<<<<<<< HEAD
         // {`blog/details/${blog.id}`}
         return (
             <div   data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
                      data-aos-duration="800" data-aos-delay="0">
+=======
+
+        return (
+            <div   data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
+                   data-aos-duration="800" data-aos-delay="0">
+>>>>>>> 9c5560692d242eee09fdfdbe0124b29a377bf5ff
                 <Wrapper />
 
                 <div class="site-wrap">
@@ -36,7 +43,11 @@ class Section extends React.Component {
                                                  style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
                                             </div>
                                             <div className="contents">
+<<<<<<< HEAD
                                                 <h2><Link to="/pages/BlogDetails.jsx">{blog.title}</Link></h2>
+=======
+                                                <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
+>>>>>>> 9c5560692d242eee09fdfdbe0124b29a377bf5ff
                                                 <p className="mb-3">{blog.short_description}</p>
                                                 <div className="post-meta">
                                                     <span className="d-block"><Link to="#">USER ID</Link></span>
