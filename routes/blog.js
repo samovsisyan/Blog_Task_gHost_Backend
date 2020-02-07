@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
         const blog = await models.findAll({});
 
 
-        res.render('blog/Blog', {blog: blog});
+        res.render('pages/Section',{blog: blog});
     } catch (e) {
         next(e)
     }

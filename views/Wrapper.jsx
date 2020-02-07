@@ -27,6 +27,11 @@ class Wrapper extends React.Component {
 <Root>
     <html>
     <head>
+
+
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css/bootstrap.min.css" />
+
         <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <link rel="stylesheet" type="text/css" href="/css/aos.css" />
         <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css" />
@@ -72,11 +77,11 @@ class Wrapper extends React.Component {
                     <div className="col-12 col-lg-6 ml-auto d-flex">
                         <div className="ml-md-auto top-social d-none d-lg-inline-block">
                             <Link to="#" className="d-inline-block p-3"><span
-                                className="icon-facebook">Span</span></Link>
+                                className="icon-facebook"><img src="images/iconfinder_facebook_834722.png" alt="Facebbok"/></span></Link>
                             <Link to="#" className="d-inline-block p-3"><span
-                                className="icon-twitter">Span</span></Link>
+                                className="icon-twitter"><img src="images/iconfinder_Instagram_1298747.png" alt="Instagram"/></span></Link>
                             <Link to="#" className="d-inline-block p-3"><span
-                                className="icon-instagram">Span</span></Link>
+                                className="icon-instagram"></span></Link>
                         </div>
                         <form action="#" className="search-form d-inline-block">
 
