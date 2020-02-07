@@ -1,6 +1,6 @@
 const React = require('react');
 const Wrapper = require('./Wrapper');
-const Section = require('./pages/section');
+const Section = require('./pages/Section');
 
 class Home extends React.Component {
 
