@@ -8,8 +8,13 @@ import { Link } from '@reach/router'
 // import '../assets/css/style.css'
 
 
+
 class Wrapper extends React.Component {
+
     render() {
+
+
+
         return (
        <div>
             <div>
@@ -76,7 +81,7 @@ class Wrapper extends React.Component {
                         <form action="#" className="search-form d-inline-block">
 
                             <div className="d-flex">
-                                <input type="email" className="form-control" placeholder="Search..." />
+                                <input type="email" className="form-control" placeholder="Search" />
                                 <button type="submit" className="btn btn-secondary"><span
                                     className="icon-search">Span</span></button>
                             </div>
@@ -135,210 +140,8 @@ class Wrapper extends React.Component {
 
         </div>
 
-        <div className="site-section py-0">
-            <div className="owl-carousel hero-slide owl-style">
 
-                <div className="site-section">
-                    <div className="container">
-                        <div className="half-post-entry d-block d-lg-flex bg-light">
-                            <div className="img-bg" style={{backgroundImage: 'url(images/big_img_1.jpg)'}}></div>
-                            <div className="contents">
-                                <span className="caption">Editor's Pick</span>
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel
-                                    sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt
-                                    aliquid quaerat culpa nemo veritatis, iste adipisci excepturi
-                                    consectetur doloribus aliquam accusantium beatae?</p>
-
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">Food</Link></span>
-                                    <span className="date-read">Jun 14 <span className="mx-1">;</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="site-section">
-                    <div className="container">
-                        <div className="half-post-entry d-block d-lg-flex bg-light">
-                            <div className="img-bg" style={{backgroundImage: 'url(images/big_img_1.jpg)'}}></div>
-                            <div className="contents">
-                                <span className="caption">Editor's Pick</span>
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel
-                                    sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt
-                                    aliquid quaerat culpa nemo veritatis, iste adipisci excepturi
-                                    consectetur doloribus aliquam accusantium beatae?</p>
-
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">Food</Link></span>
-                                    <span className="date-read">Jun 14 <span className="mx-1">Span</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
         </div>
-
-
-        <div className="site-section">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="section-title">
-                                    <h2>Editor's Pick</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className="post-entry-1">
-                                    <Link to="post-single.html" ><img src="images/img_h_1.jpg" alt="Image"
-                                                                     className="img-fluid" /></Link>
-                                    <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
-                                        Where They Are</Link></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Eligendi temporibus praesentium neque, voluptatum quam
-                                        quibusdam.</p>
-                                    <div className="post-meta">
-                                                        <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link
-                                                            to="#">News</Link></span>
-                                        <span className="date-read">Jun 14 <span className="mx-1">Span</span> 3 min read <span
-                                            className="icon-star2">Span</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="post-entry-2 d-flex bg-light">
-                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_1.jpg)'}} >
-                                        </div>
-                                    <div className="contents">
-                                        <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
-                                            Where They Are</Link></h2>
-                                        <div className="post-meta">
-                                                        <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link
-                                                            to="#">News</Link></span>
-                                            <span className="date-read">Jun 14 <span className="mx-1">Span</span> 3 min read <span
-                                                className="icon-star2">Span</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="post-entry-2 d-flex">
-                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_2.jpg)'}}></div>
-                                    <div className="contents">
-                                        <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
-                                            Where They Are</Link></h2>
-                                        <div className="post-meta">
-                                                        <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link
-                                                            to="#">News</Link></span>
-                                            <span className="date-read">Jun 14 <span className="mx-1">Span</span> 3 min read <span
-                                                className="icon-star2">Span</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="post-entry-2 d-flex">
-                                    <div className="thumbnail" style={{backgroundImage: 'url(images/img_v_3.jpg)'}}></div>
-                                    <div className="contents">
-                                        <h2><Link to="blog-single.html">News Needs to Meet Its Audiences
-                                            Where They Are</Link></h2>
-                                        <div className="post-meta">
-                                                        <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link
-                                                            to="#">News</Link></span>
-                                            <span className="date-read">Jun 14 <span className="mx-1">Span</span> 3 min read <span
-                                                className="icon-star2">Span</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="section-title">
-                            <h2>Trending</h2>
-                        </div>
-
-                        <div className="trend-entry d-flex">
-                            <div className="number align-self-start">01</div>
-                            <div className="trend-contents">
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">News</Link></span>
-                                    <span className="date-read">Jun 14 <span
-                                        className="mx-1">Span</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="trend-entry d-flex">
-                            <div className="number align-self-start">02</div>
-                            <div className="trend-contents">
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">News</Link></span>
-                                    <span className="date-read">Jun 14 <span
-                                        className="mx-1">Span</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="trend-entry d-flex">
-                            <div className="number align-self-start">03</div>
-                            <div className="trend-contents">
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">News</Link></span>
-                                    <span className="date-read">Jun 14 <span
-                                        className="mx-1">Span</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="trend-entry d-flex">
-                            <div className="number align-self-start">04</div>
-                            <div className="trend-contents">
-                                <h2><Link to="blog-single.html">News Needs to Meet Its Audiences Where They
-                                    Are</Link></h2>
-                                <div className="post-meta">
-                                    <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link to="#">News</Link></span>
-                                    <span className="date-read">Jun 14 <span
-                                        className="mx-1">Span</span> 3 min read <span
-                                        className="icon-star2">Span</span></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p>
-                            <Link to="#" className="more">See All Trends <span
-                                className="icon-keyboard_arrow_right">Span</span></Link>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
     </html>
 </Root>
