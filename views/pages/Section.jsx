@@ -75,32 +75,34 @@ class Section extends React.Component {
                 {/*    ))}*/}
 
 
-                    <div className="site-section">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-8">
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="section-title">
-                                                <h2>Editor's Pick</h2>
+                <div className="site-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-8">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="section-title">
+                                            <h2>Editor's Pick</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="post-entry-1">
+                                            <Link to="post-single.html">
+                                                <img src="images/img_h_1.jpg" alt="Image"
+                                                     className="img-fluid"/></Link>
+                                            <h2><Link to="blog-single.html">fjkvndscs</Link></h2>
+                                            <p>{blog.description}</p>
+                                            <div className="post-meta">
+                                                <span className="d-block"><Link to="#">Dave Rogers</Link> USER ID </span>
+                                                <span className="date-read">Jun 14 <span className="mx-1">•</span> 3 min read <span
+                                                    className="icon-star2">span</span></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="post-entry-1">
-                                                <Link to="post-single.html">
-                                                    <img src="images/img_h_1.jpg" alt="Image"
-                                                         className="img-fluid"/></Link>
-                                                <h2><Link to="blog-single.html">fjkvndscs</Link></h2>
-                                                <p>{blog.description}</p>
-                                                <div className="post-meta">
-                                                    <span className="d-block"><Link to="#">Dave Rogers</Link> USER ID </span>
-                                                    <span className="date-read">Jun 14 <span className="mx-1">•</span> 3 min read <span
-                                                        className="icon-star2">span</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                    {blog.map((blog) => (
 
 
                                         <div className="col-md-6">
@@ -109,7 +111,7 @@ class Section extends React.Component {
                                                      style={{backgroundImage: 'url(images/img_v_1.jpg)'}}>div
                                                 </div>
                                                 <div className="contents">
-                                                    <h2><Link to="blog-single.html">sdfdsfdsfdsfdsfds</Link>
+                                                    <h2><Link to="blog-single.html">{blog.short_description}</Link>
                                                     </h2>
                                                     <div className="post-meta">
                                                         <span className="d-block"><Link to="#">USER ID</Link></span>
@@ -119,19 +121,18 @@ class Section extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div>
-                                    </div>
+                                    ))}
                                 </div>
-                                <div className="col-lg-4">
-                                    <div className="section-title">
-                                        <h2>Trending</h2>
-                                    </div>
+                            </div>
+                            <div className="col-lg-4">
+                                <div className="section-title">
+                                    <h2>Trending</h2>
+                                </div>
 
 
 
-                                    {blog.map((blog) => (
+                                {blog.map((blog) => (
 
 
                                     <div className="trend-entry d-flex">
@@ -146,16 +147,16 @@ class Section extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                    ))}
-                                    <p>
-                                        <Link to="#" className="more">See All Trends <span
-                                            className="icon-keyboard_arrow_right">span</span></Link>
-                                    </p>
+                                ))}
+                                <p>
+                                    <Link to="#" className="more">See All Trends <span
+                                        className="icon-keyboard_arrow_right">span</span></Link>
+                                </p>
 
-                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
 
 
