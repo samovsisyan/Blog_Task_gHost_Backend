@@ -6,9 +6,10 @@ const router = express.Router();
 
 router.post('/', async (req, res, next) => {
     try {
-        const {description, user_id, blog_id} = req.body;
+        const {description, user_id, blog_id, name} = req.body;
 
         await models.create({
+            name,
             description,
             user_id,
             blog_id,
