@@ -18,9 +18,9 @@ class Section extends React.Component {
         // style={{transform: `translate3d(${-3852}px, ${0}px, ${0}px)`,  transition: `${all} 1s ${ease} 0s`, `width: ${7704}px`}}
 
         return (
-            <Wrapper data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
-                     data-aos-duration="800" data-aos-delay="0">
-
+            <div   data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
+                   data-aos-duration="800" data-aos-delay="0">
+                <Wrapper />
 
                 <div class="site-wrap">
                     <div className="site-section">
@@ -36,7 +36,7 @@ class Section extends React.Component {
                                                  style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
                                             </div>
                                             <div className="contents">
-                                                <h2><Link to="blog-single.html">{blog.title}</Link></h2>
+                                                <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
                                                 <p className="mb-3">{blog.short_description}</p>
                                                 <div className="post-meta">
                                                     <span className="d-block"><Link to="#">USER ID</Link></span>
@@ -48,37 +48,50 @@ class Section extends React.Component {
                                     ))}
                                 </div>
 
-                                <div className="col-lg-6">
-                                    <div className="section-title">
-                                        <h2>Old information</h2>
-                                    </div>
-                                    {blog_reversed.map((blog) => (
-                                        <div className="post-entry-2 d-flex">
-                                            <div className="thumbnail"
-                                                 style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
-                                            </div>
-                                            <div className="contents">
-                                                <h2><Link to="blog-single.html">{blog.title}</Link></h2>
-                                                <p className="mb-3">{blog.short_description}</p>
-                                                <div className="post-meta">
-                                                    <span className="d-block"><Link to="#">USER ID</Link></span>
-                                                    <span className="date-read">Jun 14 <span className="mx-1">•</span> 3 min read <span
-                                                        className="icon-star2">Span</span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Wrapper>
+            </div>
         )
     }
 }
 
 module.exports = Section;
+
+
+
+
+
+
+
+// <div className="col-lg-6">
+//     <div className="section-title">
+//         <h2>Old information</h2>
+//     </div>
+//     {blog_reversed.map((blog) => (
+//         <div className="post-entry-2 d-flex">
+//             <div className="thumbnail"
+//                  style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
+//             </div>
+//             <div className="contents">
+//                 <h2><Link to={`blog/details/${blog.id}`}>{blog.title}{blog.title}</Link></h2>
+//                 <p className="mb-3">{blog.short_description}</p>
+//                 <div className="post-meta">
+//                     <span className="d-block"><Link to="#">USER ID</Link></span>
+//                     <span className="date-read">Jun 14 <span className="mx-1">•</span> 3 min read <span
+//                         className="icon-star2">Span</span></span>
+//                 </div>
+//             </div>
+//         </div>
+//     ))}
+// </div>
+
+
+
+
+
+
 
 {/*/!*{blog.map((blog) => (*!/*/
 }
