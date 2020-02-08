@@ -16,6 +16,13 @@
 //
 
 
+module.exports = {
+  users: require('./users'),
+  types: require('./blog'),
+  regions: require('./comments'),
+
+};
+
 const express = require('express');
 const router = express.Router();
 

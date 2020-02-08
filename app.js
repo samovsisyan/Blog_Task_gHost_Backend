@@ -3,12 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const allowOrigin = require('./middleware/allowOrigin');
 const indexRouter = require('./routes/index');
-const bodyParser = require('body-parser');
+const allowOrigin = require('./middleware/allowOrigin');
 
 
 const app = express();
+
+
 
 
 // const jsonParser = bodyParser.json()

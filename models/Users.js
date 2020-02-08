@@ -1,7 +1,10 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../services/database');
+const md5 = require('md5');
+
 
 class Users extends Sequelize.Model {
+
 
 }
 

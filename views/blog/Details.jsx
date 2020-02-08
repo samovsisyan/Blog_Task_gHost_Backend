@@ -12,17 +12,15 @@ class Details extends React.Component {
         }
     }
 
-    handleFile (e)  {
+    handleFile(e) {
         let file = e.target.files[0]
         this.setState({file: file})
     }
 
 
-    handleUpload (e) {
+    handleUpload(e) {
         console.log(this.state.file, "The STATE ----- $$$$");
     }
-
-
 
 
     render() {
@@ -33,23 +31,21 @@ class Details extends React.Component {
         console.log(this.state, "The STATE ----- $$$$");
 
 
-
-
         return (
             <Wrapper>
-                        <h1>THE FROM</h1>
+                <h1>THE FROM</h1>
 
                 <form>
                     <div className="">
                         <label>Select File</label>
                         <input type="file" name="file" onChange={(e) =>
-                        this.handleFile(e)} />
+                            this.handleFile(e)}/>
                     </div>
 
-                    <br />
+                    <br/>
                     <button type="button" onClick={(e) => this.handleUpload(e)}>Upload</button>
                 </form>
-                
+
 
                 <div>
                     {/*<h1> {blog.title} </h1>*/}
@@ -110,7 +106,7 @@ class Details extends React.Component {
                                             <ul className="comment-list">
                                                 <li className="comment">
                                                     <div className="vcard bio">
-                                                        <img src="/images/person_1.jpg" />
+                                                        <img src="/images/person_1.jpg"/>
                                                     </div>
                                                     <div className="comment-body">
                                                         {comments.map((comment) => (
