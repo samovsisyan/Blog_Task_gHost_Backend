@@ -1,22 +1,59 @@
 import {Link} from "@reach/router";
+import {useState} from "react";
 
 const React = require('react');
 const Wrapper = require('../Wrapper');
 
 class Details extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            file: null,
+        }
+    }
+
+    handleFile (e)  {
+        let file = e.target.files[0]
+        this.setState({file: file})
+    }
+
+
+    handleUpload (e) {
+        console.log(this.state.file, "The STATE ----- $$$$");
+    }
+
+
 
 
     render() {
         const {blog, comments} = this.props;
-        console.log(blog, 11111111111111111111111111111111111111111111111111112222222222222222222233333333333333333333);
-        console.log(comments.length, 44444444444444444444444444);
+        // console.log(blog, );
+        // console.log(comments.length, );
+
+        console.log(this.state, "The STATE ----- $$$$");
+
+
+
+
         return (
             <Wrapper>
+                        <h1>THE FROM</h1>
 
+                <form>
+                    <div className="">
+                        <label>Select File</label>
+                        <input type="file" name="file" onChange={(e) =>
+                        this.handleFile(e)} />
+                    </div>
+
+                    <br />
+                    <button type="button" onClick={(e) => this.handleUpload(e)}>Upload</button>
+                </form>
+                
 
                 <div>
-                    <h1> {blog.title} </h1>
-                    <h2> {blog.description} </h2>
+                    {/*<h1> {blog.title} </h1>*/}
+                    {/*<h2> {blog.description} </h2>*/}
 
                     {/*    <form action="/comments" method="POST">*/}
                     {/*        <input type="text" name="description"/>*/}
@@ -27,9 +64,9 @@ class Details extends React.Component {
                     {/*</div>*/}
 
 
-                    {comments.map((comment) => (
-                        <h1>{comment.description}</h1>
-                    ))}
+                    {/*{comments.map((comment) => (*/}
+                    {/*    <h1>{comment.description}</h1>*/}
+                    {/*))}*/}
 
 
                     <div>
@@ -39,14 +76,14 @@ class Details extends React.Component {
                                 <div className="row">
                                     <div className="col-lg-8 single-content">
                                         <p className="mb-5">
-                                            <img src="images/big_img_1.jpg" alt="Image" className="img-fluid"/>
+                                            <img src="/images/big_img_1.jpg" alt="Image" className="img-fluid"/>
                                         </p>
                                         <h1 className="mb-4">
                                             News Needs to Meet Its Audiences Where They Are
                                         </h1>
                                         <div className="post-meta d-flex mb-5">
                                             <div className="bio-pic mr-3">
-                                                <img src="images/person_1.jpg" alt="Image" className="img-fluidid"/>
+                                                <img src="/images/person_1.jpg" alt="Image" className="img-fluidid"/>
                                             </div>
                                             <div className="vcard">
                                             <span className="d-block"><Link to="#">Dave Rogers</Link> in <Link
