@@ -12,15 +12,20 @@ class Details extends React.Component {
         }
     }
 
-    handleFile(e) {
-        let file = e.target.files[0]
-        this.setState({file: file})
-    }
+    // handleFile(e) {
+    //     let file = e.target.files[0]
+    //     this.setState({file: file})
+    // }
+    //
+    //
+    // handleUpload(e) {
+    //     console.log(this.state.file, "The STATE ----- $$$$");
+    // }
 
 
-    handleUpload(e) {
-        console.log(this.state.file, "The STATE ----- $$$$");
-    }
+    fileSelectedHandler = event => {
+        console.log(event)
+    };
 
 
     render() {
@@ -34,17 +39,23 @@ class Details extends React.Component {
         return (
             <Wrapper>
                 <h1>THE FROM</h1>
+                
+                <div className="App">
+                    <input type="file" onChange={this.fileSelectedHandler}/>
+                </div>
+                
+                
 
-                <form>
-                    <div className="">
-                        <label>Select File</label>
-                        <input type="file" name="file" onChange={(e) =>
-                            this.handleFile(e)}/>
-                    </div>
-
-                    <br/>
-                    <button type="button" onClick={(e) => this.handleUpload(e)}>Upload</button>
-                </form>
+                {/*<form>*/}
+                {/*    <div className="">*/}
+                {/*        <label>Select File</label>*/}
+                {/*        <input type="file" name="file" onChange={(e) =>*/}
+                {/*            this.handleFile(e)}/>*/}
+                {/*    </div>*/}
+                
+                {/*    <br/>*/}
+                {/*    <button type="button" onClick={(e) => this.handleUpload(e)}>Upload</button>*/}
+                {/*</form>*/}
 
 
                 <div>
