@@ -20,6 +20,7 @@ module.exports = {
   users: require('./users'),
   types: require('./blog'),
   regions: require('./comments'),
+  regions: require('./profile'),
 
 };
 
@@ -29,6 +30,7 @@ const router = express.Router();
 router.use('/blog', require('./blog'));
 router.use('/users', require('./users'));
 router.use('/comments', require('./comments'));
+router.use('/profile', require('./profile'));
 
 
 router.get('/', function(req, res, next) {

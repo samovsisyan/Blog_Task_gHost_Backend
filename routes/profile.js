@@ -7,22 +7,22 @@ const storage = multer.diskStorage({
         cb(null, 'uploads/')
     },
     filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
+        cb(null, file.fieldname + '-' + Date.now() + '.jpg')
     }
 });
 
 const upload = multer({ storage: storage }).single('profileImage')
 
 
-router.post('/profile', function (req, res) {
+router.post('/', function (req, res) {
     upload(req, res, function (err) {
-        if (err instanceof multer.MulterError) {
+        if (err) {
             // Случилась ошибка Multer при загрузке.
-        } else {
-            // При загрузке произошла неизвестная ошибка.
         }
-
-        // Все прекрасно загрузилось.
+        res.json({
+            success: true,
+            message: "Image uploads"
+        })
     })
 });
 
