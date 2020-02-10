@@ -51,6 +51,10 @@ class Details extends React.Component {
 
 
 
+
+
+
+
                 <form action="/blog" method="POST">
 
                     <label>title *</label>
