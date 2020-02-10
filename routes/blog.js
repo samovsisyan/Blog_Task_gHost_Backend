@@ -50,13 +50,15 @@ router.get('/details/:id', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
-        const {title, description, short_description, slug} = req.body;
+        const {title, description, short_description, slug, created_at, img} = req.body;
 
         await models.create({
             title,
             description,
             short_description,
             slug,
+            created_at,
+            img,
         });
 
         res.send({

@@ -6,28 +6,33 @@ class Admin extends Component {
 
 
     render() {
-
-        const {blog} = this.props;
+        const {admin} = this.props
         console.log(admin, 4444444444444444444444444444444444444);
         return (
             <div>
-                <form action="/blog" method="POST">
+                {/*<form action="/admin" method="POST">*/}
 
-                    <label>title *</label>
-                    <input type="text" name="title"/>
+                {/*    <label>title *</label>*/}
+                {/*    <input type="text" name="title"/>*/}
 
-                    <label>description *</label>
-                    <input type="text" name="description"/>
+                {/*    <label>description *</label>*/}
+                {/*    <input type="text" name="description"/>*/}
 
-                    <label>short_description *</label>
-                    <input type="text" name="short_description"/>
+                {/*    <label>short_description *</label>*/}
+                {/*    <input type="text" name="short_description"/>*/}
 
-                    <label>slug *</label>
-                    <input type="text" name="slug"/>
+                {/*    <label>slug *</label>*/}
+                {/*    <input type="text" name="slug"/>*/}
 
-                    <button>Comments</button>
+                {/*    <label>created_at *</label>*/}
+                {/*    <input type="text" name="created_at"/>*/}
 
-                </form>
+                {/*    <label>img *</label>*/}
+                {/*    <input type="text" name="img"/>*/}
+
+                {/*    <button>Comments</button>*/}
+
+                {/*</form>*/}
 
 
                 {/*<form action="/admin" method="POST" className="p-5 bg-light">*/}

@@ -22,6 +22,32 @@ class Details extends React.Component {
                     <button>Upload</button>
                 </form>
 
+
+
+                <form action="/blog" method="POST">
+
+                    <label>title *</label>
+                    <input type="text" name="title"/>
+
+                    <label>description *</label>
+                    <input type="text" name="description"/>
+
+                    <label>short_description *</label>
+                    <input type="text" name="short_description"/>
+
+                    <label>slug *</label>
+                    <input type="text" name="slug"/>
+
+                    <label>created_at *</label>
+                    <input type="text" name="created_at"/>
+
+                    <label>img *</label>
+                    <input type="text" name="img"/>
+
+                    <button>Comments</button>
+
+                </form>
+
                 <div>
                     {/*<h1> {blog.title} </h1>*/}
                     {/*<h2> {blog.description} </h2>*/}
