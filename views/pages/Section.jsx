@@ -25,16 +25,18 @@ class Section extends React.Component {
                 <div class="site-wrap">
                     <div className="site-section">
                         <div className="container">
+                            <div className="section-title">
+                                <h2>New information</h2>
+                            </div>
                             <div className="row">
+
                                 <div className="col-lg-6">
-                                    <div className="section-title">
-                                        <h2>New information</h2>
-                                    </div>
+
                                     {blog.map((blog) => (
                                         <form action="/blog" method="DELETE">
                                             <div className="post-entry-2 d-flex">
                                                 <div className="thumbnail"
-                                                     style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
+                                                     style={{backgroundImage: 'url(images/big_v_1.jpg)'}}>
                                                 </div>
                                                 <div className="contents">
                                                     <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
