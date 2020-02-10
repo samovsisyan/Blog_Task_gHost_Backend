@@ -11,11 +11,16 @@ class Details extends React.Component {
         // console.log(blog, );
         // console.log(comments.length, );
 
-        console.log(this.state, "The STATE ----- $$$$");
+        console.log(blog, "The STATE ----- $$$$");
 
 
         return (
             <Wrapper>
+
+                <form action="/profile" method="POST">
+                    <input type="file" name="profileImage" />
+                    <button>Upload</button>
+                </form>
 
                 <div>
                     {/*<h1> {blog.title} </h1>*/}

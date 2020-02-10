@@ -1,6 +1,6 @@
 const React = require('react');
 const Wrapper = require('./Wrapper');
-const Section = require('./pages/Section');
+import Admin from './pages/Admin';
 // const BlogDetails = require('./pages/BlogDetails');
 
 class Home extends React.Component {
@@ -8,8 +8,8 @@ class Home extends React.Component {
     render() {
         return (
             <Wrapper>
-                <Section />
 
+                <Admin />
 
             </Wrapper>
         )

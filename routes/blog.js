@@ -38,6 +38,8 @@ router.get('/details/:id', async (req, res, next) => {
                 }});
 
         res.render('blog/Details', {blog: blog, comments:model_comments });
+
+
     } catch (e) {
         next(e)
     }
@@ -45,6 +47,28 @@ router.get('/details/:id', async (req, res, next) => {
 
 
 
+
+router.post('/', async (req, res, next) => {
+    try {
+        const {title, description, short_description, slug} = req.body;
+
+        await models.create({
+            title,
+            description,
+            short_description,
+            slug,
+        });
+
+        res.send({
+            status: "ok",
+            message: "Create New Blog"
+        })
+
+    } catch (e) {
+        next(e)
+
+    }
+});
 
 
 

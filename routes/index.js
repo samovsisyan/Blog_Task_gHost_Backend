@@ -21,6 +21,7 @@ module.exports = {
   types: require('./blog'),
   regions: require('./comments'),
   regions: require('./profile'),
+  regions: require('./admin'),
 
 };
 
@@ -31,6 +32,7 @@ router.use('/blog', require('./blog'));
 router.use('/users', require('./users'));
 router.use('/comments', require('./comments'));
 router.use('/profile', require('./profile'));
+router.use('/admin', require('./admin'));
 
 
 router.get('/', function(req, res, next) {

@@ -66,7 +66,7 @@ class Blog extends React.Component {
 
     render() {
         const {blog, comments} = this.props;
-        console.log(this.props,77777777777777777777777)
+        console.log(blog,888888888888888888888888)
         return (
             <Wrapper>
                 <div>

@@ -9,7 +9,10 @@ const allowOrigin = require('./middleware/allowOrigin');
 
 const app = express();
 
-const profile = require('./routes/profile')
+const profile = require('./routes/profile');
+const admin = require('./routes/admin');
+
+
 
 
 
@@ -47,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use('/', indexRouter);
 app.use('/profile', profile);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
