@@ -18,9 +18,9 @@ class Section extends React.Component {
         // style={{transform: `translate3d(${-3852}px, ${0}px, ${0}px)`,  transition: `${all} 1s ${ease} 0s`, `width: ${7704}px`}}
         // {`blog/details/${blog.id}`}
         return (
-            <div   data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
-                     data-aos-duration="800" data-aos-delay="0">
-                <Wrapper />
+            <div data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
+                 data-aos-duration="800" data-aos-delay="0">
+                <Wrapper/>
 
                 <div class="site-wrap">
                     <div className="site-section">
@@ -31,20 +31,24 @@ class Section extends React.Component {
                                         <h2>New information</h2>
                                     </div>
                                     {blog.map((blog) => (
-                                        <div className="post-entry-2 d-flex">
-                                            <div className="thumbnail"
-                                                 style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
-                                            </div>
-                                            <div className="contents">
-                                                <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
-                                                <p className="mb-3">{blog.short_description}</p>
-                                                <div className="post-meta">
-                                                    <span className="d-block"><Link to="#">USER ID</Link></span>
-                                                    <span className="date-read">Jun 14 <span className="mx-1">•</span> 3 min read <span
-                                                        className="icon-star2">Span</span></span>
+                                        <form action="/blog" method="DELETE">
+                                            <div className="post-entry-2 d-flex">
+                                                <div className="thumbnail"
+                                                     style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
+                                                </div>
+                                                <div className="contents">
+                                                    <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
+                                                    <p className="mb-3">{blog.short_description}</p>
+                                                    <input type="submit" name="blogID" value="Delete"/>
+                                                    <div className="post-meta">
+                                                        <span className="d-block"><Link to="#">USER ID</Link></span>
+                                                        <span className="date-read">Jun 14 <span
+                                                            className="mx-1">•</span> 3 min read <span
+                                                            className="icon-star2">Span</span></span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     ))}
                                 </div>
 
@@ -58,11 +62,6 @@ class Section extends React.Component {
 }
 
 module.exports = Section;
-
-
-
-
-
 
 
 // <div className="col-lg-6">
@@ -86,11 +85,6 @@ module.exports = Section;
 //         </div>
 //     ))}
 // </div>
-
-
-
-
-
 
 
 {/*/!*{blog.map((blog) => (*!/*/
