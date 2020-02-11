@@ -95,21 +95,31 @@ router.post('/update/:id', async (req, res, next) => {
 });
 
 
-router.delete('/', async (req, res, next) => {
+router.post('/blog/:id', async (req, res, next) => {
     try {
-        const userID = req.param('id');
+        const blogID = req.param('id');
         await models.destroy({
             where: {
-                "id": userID
+                "id": blogID
             }
         });
-        res.send({
-            status: "ok",
-        })
+        res.redirect('admin/blog')
     } catch (e) {
         next(e)
     }
 });
+
+// router.delete('/', async (req, res, next) => {
+//     try {
+//         const {id} = req.body;
+//         await models.destroy({where: {id}});
+//         res.json({
+//             status: 'ok',
+//         })
+//     } catch (e) {
+//         next(e)
+//     }
+// });
 
 
 
