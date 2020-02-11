@@ -1,7 +1,8 @@
 import { LOCALES } from "../locales";
 
 export default {
-    [LOCALES.GEOMETRY]: {
-        'hello' : 'Bonjour',
+    [LOCALES.ELNGLISH]: {
+        'hello' : 'Hello',
+        'edit': "Edit {path} and save to reload."
     }
 }
