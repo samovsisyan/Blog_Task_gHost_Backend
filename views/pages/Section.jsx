@@ -9,7 +9,7 @@ import Wrapper from "../Wrapper";
 class Section extends React.Component {
 
     render() {
-        const {blog, comments} = this.props;
+        const {blog, } = this.props;
         // console.log(this.props, 77777777777777777777777);
 
         // const blog_reversed = blog.reverse();
@@ -36,12 +36,16 @@ class Section extends React.Component {
                                         <form action="/blog" method="DELETE">
                                             <div className="post-entry-2 d-flex">
                                                 <div className="thumbnail"
-                                                     style={{backgroundImage: 'url(images/big_v_1.jpg)'}}>
+                                                     style={{backgroundImage: 'url(images/big_img_1.jpg)'}}>
                                                 </div>
                                                 <div className="contents">
                                                     <h2><Link to={`blog/details/${blog.id}`}>{blog.title}</Link></h2>
                                                     <p className="mb-3">{blog.short_description}</p>
+
+
                                                     <input type="submit" name="blogID" value="Delete"/>
+
+
                                                     <div className="post-meta">
                                                         <span className="d-block"><Link to="#">USER ID</Link></span>
                                                         <span className="date-read">Jun 14 <span

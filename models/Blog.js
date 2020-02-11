@@ -30,16 +30,16 @@ Blog.init({
         allowNull: false
 
     },
-    slug: {
-        type: Sequelize.STRING,
-        allowNull: false
 
-    },
     created_at: {
         type: Sequelize.STRING,
         allowNull: false,
-
     },
+    // updated_at: {
+    //     type: Sequelize.STRING,
+    //     allowNull: false,
+    // },
+
     img: {
         type: Sequelize.STRING,
         allowNull: false

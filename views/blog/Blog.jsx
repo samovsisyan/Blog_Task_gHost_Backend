@@ -65,8 +65,7 @@ const Wrapper = require('../Wrapper');
 class Blog extends React.Component {
 
     render() {
-        const {blog, comments} = this.props;
-        console.log(blog,888888888888888888888888)
+        const {blog, } = this.props;
         return (
             <Wrapper>
                 <div>

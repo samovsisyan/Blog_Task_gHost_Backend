@@ -5,7 +5,7 @@ const React = require('react');
 // import { BrowserRouter, Link } from 'react-router-dom';
 import { Root } from 'react-static'
 import { Link } from '@reach/router'
-// import '../assets/css/style.css'
+// import '../assets/admin_css/style.admin_css'
 // import Section from './pages/Section';
 
 

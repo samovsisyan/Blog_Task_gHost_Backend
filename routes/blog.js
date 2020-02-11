@@ -48,61 +48,8 @@ router.get('/details/:id', async (req, res, next) => {
 
 
 
-router.post('/', async (req, res, next) => {
-    try {
-        const {title, description, short_description, slug, created_at, img} = req.body;
-
-        await models.create({
-            title,
-            description,
-            short_description,
-            slug,
-            created_at,
-            img,
-        });
-
-        res.send({
-            status: "ok",
-            message: "Create New Blog"
-        })
-
-    } catch (e) {
-        next(e)
-
-    }
-});
 
 
-
-router.post('/create', async (req, res, next) => {
-    try {
-        const {
-            id,
-            title,
-            description,
-            short_description,
-            slug,
-            created_at,
-            img,
-        } = req.body;
-        const blog = await models.update({
-            title,
-            description,
-            short_description,
-            slug,
-            created_at,
-            img,
-        }, {where: {id}});
-        res.send({
-            status: "ok",
-            message: "Update New Blog"
-        })
-
-    } catch (e) {
-        next(e)
-    }
-
-});
 
 
 

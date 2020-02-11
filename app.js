@@ -10,7 +10,6 @@ const allowOrigin = require('./middleware/allowOrigin');
 const app = express();
 
 const profile = require('./routes/profile');
-const admin = require('./routes/admin');
 
 
 
@@ -50,7 +49,6 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 app.use('/', indexRouter);
 app.use('/profile', profile);
-app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -115,7 +113,7 @@ app.use(function(err, req, res, next) {
 //   var mimeTypes = {
 //     '.html': 'text/html',
 //     '.js': 'text/javascript',
-//     '.css': 'text/css',
+//     '.admin_css': 'text/admin_css',
 //     '.json': 'application/json',
 //     '.png': 'image/png',
 //     '.jpg': 'image/jpg',

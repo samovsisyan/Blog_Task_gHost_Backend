@@ -17,41 +17,11 @@ class Details extends React.Component {
         return (
             <Wrapper>
 
-                <form action="/profile" method="POST">
-                    <input type="file" name="profileImage" />
-                    <button>Upload</button>
-                </form>
-
-                <form action="/blog/create" method="POST">
-
-                    <label>id *</label>
-                    <input type="text" name="id"/>
-
-                    <label>title *</label>
-                    <input type="text" name="title"/>
-
-                    <label>description *</label>
-                    <input type="text" name="description"/>
-
-                    <label>short_description *</label>
-                    <input type="text" name="short_description"/>
-
-                    <label>slug *</label>
-                    <input type="text" name="slug"/>
-
-                    <label>created_at *</label>
-                    <input type="text" name="created_at"/>
-
-                    <label>img *</label>
-                    <input type="text" name="img"/>
-
-                    <button>Update</button>
-
-                </form>
 
 
 
 
+<h1>Admin Upadte</h1>
 
 
 
