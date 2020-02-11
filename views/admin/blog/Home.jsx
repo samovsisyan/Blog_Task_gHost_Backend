@@ -63,6 +63,7 @@ class Home extends Component {
                                 <th>short_description</th>
                                 <th>created_at</th>
                                 <th>img</th>
+                                <th>update</th>
                             </tr>
                             <tr>
                                 <td>{blog.id}</td>
@@ -71,6 +72,7 @@ class Home extends Component {
                                 <td>{blog.short_description}</td>
                                 <td>{blog.created_at}</td>
                                 <td>{blog.img}</td>
+                                <td><a href={`/admin/blog/update/${blog.id}`}>Update</a></td>
                             </tr>
                            
                         </table>

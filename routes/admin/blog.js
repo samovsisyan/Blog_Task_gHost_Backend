@@ -26,10 +26,12 @@ router.get('/create', async (req, res, next) => {
 });
 
 
-router.get('/update', async (req, res, next) => {
+router.get('/update/:id', async (req, res, next) => {
     try {
-        const blog = await models.findAll();
-        res.render('admin/blog/Update', )
+        const {id} = req.params;
+
+        const blog = await models.findOne({id:id});
+        res.render('admin/blog/Update', {blog:blog})
     } catch (e) {
         next(e)
     }
@@ -39,8 +41,10 @@ router.get('/update', async (req, res, next) => {
 
 router.post('/create', async (req, res, next) => {
     try {
-        const {title, description, short_description, img, } = req.body;
         const created_at = new Date();
+
+
+        const {title, description, short_description, img, } = req.body;
 
         await models.create({
             title,
@@ -76,9 +80,9 @@ router.post('/update/:id', async (req, res, next) => {
             description,
             short_description,
             img,
-        }, {where: {id}});
+        }, {where: {id: id}});
 
-        res.render('admin/blog/Update')
+        res.redirect('/admin/blog')
 
     } catch (e) {
         next(e)

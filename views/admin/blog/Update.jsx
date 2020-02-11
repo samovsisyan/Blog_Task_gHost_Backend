@@ -2,28 +2,24 @@ import React, {Component} from 'react';
 
 class Update extends Component {
     render() {
+
+        const {blog} = this.props;
+
         return (
             <div>
-                <form action="admin/blog/update" method="POST">
-
-                    <label>id *</label>
-                    <input type="text" name="id"/>
+                <form method="POST">
 
                     <label>title *</label>
-                    <input type="text" name="title"/>
+                    <input type="text" name="title" value={blog.title}/>
 
                     <label>description *</label>
-                    <input type="text" name="description"/>
+                    <input type="text" name="description" value={blog.description}/>
 
                     <label>short_description *</label>
-                    <input type="text" name="short_description"/>
+                    <input type="text" name="short_description" value={blog.short_description}/>
 
                     <label>img *</label>
-                    <input type="text" name="img"/>
-
-
-
-
+                    <input type="text" name="img" value={blog.img}/>
 
                     <button>Update</button>
 
