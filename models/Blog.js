@@ -32,8 +32,9 @@ Blog.init({
     },
 
     created_at: {
-        type: Sequelize.STRING,
+        type: Sequelize.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW
     },
     // updated_at: {
     //     type: Sequelize.STRING,

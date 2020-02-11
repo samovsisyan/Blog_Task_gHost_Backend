@@ -50,6 +50,16 @@ class Home extends Component {
                 {/*    <td>{blog.img}</td>*/}
                 {/*</tr>*/}
 
+
+                <h1>Admin / BLog</h1>
+
+                <form action="/profile" method="POST">
+                    <input type="file" name="profileImage" />
+                    <button>Upload</button>
+                </form>
+
+
+
                 <h2>HTML Table</h2>
 
                 <input type="text"/>
@@ -73,6 +83,7 @@ class Home extends Component {
                                 <td>{blog.created_at}</td>
                                 <td>{blog.img}</td>
                                 <td><a href={`/admin/blog/update/${blog.id}`}>Update</a></td>
+                                <td><a href="/admin/blog/create/">Create</a></td>
                             </tr>
                            
                         </table>

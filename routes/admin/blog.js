@@ -6,7 +6,11 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
     try {
-        const blogs = await models.findAll({});
+        const blogs = await models.findAll({
+            order: [
+                ['id', 'DESC'],
+            ],
+        });
 
         res.render('admin/blog/Home', {blogs: blogs});
     } catch (e) {
@@ -18,8 +22,9 @@ router.get('/', async (req, res, next) => {
 
 router.get('/create', async (req, res, next) => {
     try {
-        const blog = await models.findAll();
-        res.render('admin/blog/Create', )
+
+        const blog = await models.findAll({});
+        res.render('admin/blog/Create', {blog:blog} )
     } catch (e) {
         next(e)
     }
@@ -41,7 +46,7 @@ router.get('/update/:id', async (req, res, next) => {
 
 router.post('/create', async (req, res, next) => {
     try {
-        const created_at = new Date();
+        // const created_at = new Date();
 
 
         const {title, description, short_description, img, } = req.body;
@@ -50,11 +55,10 @@ router.post('/create', async (req, res, next) => {
             title,
             description,
             short_description,
-            created_at,
             img,
         });
 
-        res.render('admin/blog/Create')
+        res.redirect('/admin/blog')
 
     } catch (e) {
         next(e)
