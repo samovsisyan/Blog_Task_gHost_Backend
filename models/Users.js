@@ -40,6 +40,12 @@ Users.init({
         type: Sequelize.ENUM('admin', 'user'),
         allowNull: false,
     },
+    img: {
+        type: Sequelize.STRING,
+        allowNull: false
+
+    }
+
     // slug: {
     //     type: Sequelize.STRING,
     //     allowNull: false

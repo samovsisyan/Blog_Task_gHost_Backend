@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
     try {
         // const blogs = await models.findAll({});
 
-        res.render('user/Signin');
+        res.render('user/signin/Create');
     } catch (e) {
         next(e)
     }
