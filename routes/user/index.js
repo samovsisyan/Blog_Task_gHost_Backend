@@ -1,4 +1,6 @@
 module.exports = {
+    user: require('../admin/user'),
+
     signin: require('./signin'),
     signup: require('./signup'),
 
@@ -7,6 +9,9 @@ module.exports = {
 
 const express = require('express');
 const router = express.Router();
+
+router.use('/user', require('../admin/user'));
+
 
 router.use('/signin', require('./signin'));
 router.use('/signup', require('./signup'));

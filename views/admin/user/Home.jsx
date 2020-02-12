@@ -42,8 +42,8 @@ class Home extends Component {
                                 <td>{user.username}</td>
                                 <td>{user.password}</td>
                                 <td>{user.email}</td>
-                                <td>{blog.role}</td>
-                                <td>{blog.img}</td>
+                                <td>{user.role}</td>
+                                <td>{user.img}</td>
                                 <td><a href={`/admin/user/update/${user.id}`}>Update</a></td>
                             </tr>
 

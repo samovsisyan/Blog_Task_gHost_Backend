@@ -18,8 +18,12 @@ class Create extends Component {
                     <label>email *</label>
                     <input type="text" name="email" />
 
-                    <label>role *</label>
-                    <input type="text" name="role" />
+                    {/*<label>role *</label>*/}
+                    {/*<input type="text" name="role" />*/}
+                    <select name="role">
+                        <option>admin</option>
+                        <option>user</option>
+                    </select>
 
                     <label>img *</label>
                     <input type="text" name="img" />

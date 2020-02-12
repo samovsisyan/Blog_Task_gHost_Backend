@@ -18,11 +18,15 @@ class Update extends Component {
                     <label>email *</label>
                     <input type="text" name="email" value={user.email}/>
 
-                    <label>role *</label>
-                    <input type="text" name="role" value={user.role}/>
+                    {/*<label>role *</label>*/}
+                    {/*<input type="text" name="role" value={user.role}/>*/}
+                    <select name="role">
+                        <option value={user.role}>admin</option>
+                        <option value={user.role}>user</option>
+                    </select>
 
                     <label>img *</label>
-                    <input type="text" name="img" value={blog.img}/>
+                    <input type="text" name="img" value={user.img}/>
 
                     <button>Update</button>
 
