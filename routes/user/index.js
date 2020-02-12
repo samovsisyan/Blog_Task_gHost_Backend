@@ -1,6 +1,6 @@
 module.exports = {
-
-    blog: require('./blog'),
+    signin: require('./signin'),
+    signup: require('./signup'),
 
 
 };
@@ -8,7 +8,8 @@ module.exports = {
 const express = require('express');
 const router = express.Router();
 
-router.use('/blog', require('./blog'));
+router.use('/signin', require('./signin'));
+router.use('/signup', require('./signup'));
 
 
 

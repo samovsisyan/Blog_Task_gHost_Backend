@@ -36,9 +36,14 @@ router.use('/profile', require('./profile'));
 router.use('/admin', require('./admin/index'));
 router.use('/admin/blog', require('./admin/blog'));
 
+
+router.use('/user/signin', require('./user/signin'));
+router.use('/user/signup', require('./user/signup'));
+
 router.use('/lang', require('./lang/index'));
 router.use('/lang/am', require('./lang/am'));
 router.use('/lang/en', require('./lang/en'));
+router.use('/lang/ru', require('./lang/ru'));
 router.use('/lang/ru', require('./lang/ru'));
 
 
