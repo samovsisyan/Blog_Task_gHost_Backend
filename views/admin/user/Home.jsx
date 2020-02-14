@@ -8,23 +8,19 @@ class Home extends Component {
             <div>
                 <html>
                 <head>
-
-
                     <link rel="stylesheet" type="text/css" href="/style/style.css"/>
-
                 </head>
-
                 <body>
+                    <h1>Admin / User</h1>
 
-
-                <h1>Admin / User</h1>
-
-
+                {/*<form action="/user/signup/signup" method="POST">*/}
+                {/*    <input type="text"/>*/}
+                {/*</form>*/}
 
 
                 <h2>HTML Table</h2>
 
-                <button><a href="/admin/user/create/">Create</a></button>
+                <button><a href="/admin/user/create">Create</a></button>
 
                 {user.map((user) => (
                         <table>

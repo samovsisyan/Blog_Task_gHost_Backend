@@ -8,16 +8,10 @@ class Home extends Component {
             <div>
                 <html>
                 <head>
-
-
                     <link rel="stylesheet" type="text/css" href="/style/style.css"/>
-
                 </head>
-
                 <body>
-
-
-                <h1>Admin / BLog</h1>
+                     <h1>Admin / BLog</h1>
 
                 <form action="/profile" method="POST">
                     <input type="file" name="profileImage"/>

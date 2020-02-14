@@ -12,7 +12,7 @@ import { Link } from '@reach/router'
 
 
 
-class Wrapper extends React.Component {
+class Header extends React.Component {
 
     render() {
 
@@ -85,9 +85,9 @@ class Wrapper extends React.Component {
                     <div className="col-12 col-lg-6 ml-auto d-flex">
                         <div className="ml-md-auto top-social d-none d-lg-inline-block">
                             <Link to="#" className="d-inline-block p-3"><span
-                                className="icon-facebook"><img src="images/iconfinder_facebook_834722.png" alt="Facebbok"/></span></Link>
+                                className="icon-facebook"><img src="/images/iconfinder_facebook_834722.png" alt="Facebbok"/></span></Link>
                             <Link to="#" className="d-inline-block p-3"><span
-                                className="icon-twitter"><img src="images/iconfinder_Instagram_1298747.png" alt="Instagram"/></span></Link>
+                                className="icon-twitter"><img src="/images/iconfinder_Instagram_1298747.png" alt="Instagram"/></span></Link>
                             <Link to="#" className="d-inline-block p-3"><span
                                 className="icon-instagram"></span></Link>
                         </div>
@@ -162,25 +162,24 @@ class Wrapper extends React.Component {
 
 
 
-
-    <div className="site-section subscribe bg-light">
-        <div className="container">
-            <form action="#" className="row align-items-center">
-                <div className="col-md-5 mr-auto">
-                    <h2>Newsletter Subcribe</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis
-                        pariatur obcaecati possimus nisi ea iste!</p>
-                </div>
-                <div className="col-md-6 ml-auto">
-                    <div className="d-flex">
-                        <input type="email" className="form-control" placeholder="Enter your email" />
-                            <button type="submit" className="btn btn-secondary"><span
-                                className="icon-paper-plane">Span</span></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+    {/*<div className="site-section subscribe bg-light">*/}
+    {/*    <div className="container">*/}
+    {/*        <form action="#" className="row align-items-center">*/}
+    {/*            <div className="col-md-5 mr-auto">*/}
+    {/*                <h2>Newsletter Subcribe</h2>*/}
+    {/*                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis*/}
+    {/*                    pariatur obcaecati possimus nisi ea iste!</p>*/}
+    {/*            </div>*/}
+    {/*            <div className="col-md-6 ml-auto">*/}
+    {/*                <div className="d-flex">*/}
+    {/*                    <input type="email" className="form-control" placeholder="Enter your email" />*/}
+    {/*                        <button type="submit" className="btn btn-secondary"><span*/}
+    {/*                            className="icon-paper-plane">Span</span></button>*/}
+    {/*                </div>*/}
+    {/*            </div>*/}
+    {/*        </form>*/}
+    {/*    </div>*/}
+    {/*</div>*/}
 
 
 
@@ -193,4 +192,4 @@ class Wrapper extends React.Component {
   )
  }
 }
-module.exports = Wrapper;
+module.exports = Header;

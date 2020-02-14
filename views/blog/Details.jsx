@@ -1,6 +1,9 @@
 const React = require('react');
-const Wrapper = require('../Wrapper');
+const Wrapper = require('../Header');
 import {Link} from "@reach/router";
+import Header from "../Header";
+import Footer from "../Footer";
+
 
 class Details extends React.Component {
 
@@ -15,44 +18,9 @@ class Details extends React.Component {
 
 
         return (
-            <Wrapper>
-
-
-
-
-
-<h1>Admin Upadte</h1>
-
-
-
-                <form action="/blog" method="POST">
-
-                    <label>title *</label>
-                    <input type="text" name="title"/>
-
-                    <label>description *</label>
-                    <input type="text" name="description"/>
-
-                    <label>short_description *</label>
-                    <input type="text" name="short_description"/>
-
-                    <label>slug *</label>
-                    <input type="text" name="slug"/>
-
-                    <label>created_at *</label>
-                    <input type="text" name="created_at"/>
-
-                    <label>img *</label>
-                    <input type="text" name="img"/>
-
-                    <button>Comments</button>
-
-                </form>
-
+            <div>
+                <Header />
                 <div>
-
-
-
                     <div>
 
                         <div className="site-section">
@@ -135,8 +103,6 @@ class Details extends React.Component {
                                                         <button onclick="redirect()" value="Redirect">Comments</button>
                                                     </div>
                                                 </form>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +111,8 @@ class Details extends React.Component {
                         </div>
                     </div>
                 </div>
-            </Wrapper>
+                <Footer/>
+            </div>
         )
     }
 }

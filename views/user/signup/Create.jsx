@@ -6,35 +6,27 @@ class Create extends Component {
         console.log(user,55555555555555555)
         return (
             <div>
-                <h2>Create Signup</h2>
+                <h2>Signup</h2>
 
-                {user.map((user) => (
-                    <ul>
-                        <li>{user.username}</li>
-                        <li>{user.password}</li>
-                        <li>{user.email}</li>
-                        <li>{user.role}</li>
-                    </ul>
-                ))}
+                {/*{user.map((user) => (*/}
+                {/*    <ul>*/}
+                {/*        <li>{user.username}</li>*/}
+                {/*        <li>{user.password}</li>*/}
+                {/*        <li>{user.email}</li>*/}
+                {/*        <li>{user.role}</li>*/}
+                {/*    </ul>*/}
+                {/*))}*/}
 
-                <form  method="POST">
-
+                <form action="/signup" method="POST" >
                     <label>username *</label>
-                    <input type="text" name="username" />
+                    <input name = "id" type = "text" required placeholder = "User ID" name="username" />
 
                     <label>password *</label>
-                    <input type="text" name="password" />
+                    <input name = "password" type = "password" required placeholder = "Password" name="password" />
 
-                    <label>email *</label>
-                    <input type="text" name="email" />
-
-                    <label>role *</label>
-                    <input type="text" name="role" />
-
-                    <button>Create Signup</button>
-
-
+                    <button>Signup</button>
                 </form>
+
             </div>
         );
     }

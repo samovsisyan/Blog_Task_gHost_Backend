@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
         });
 
 
-        res.render('pages/Section', {blog: blog});
+        res.render('blog/Blog', {blog: blog});
     } catch (e) {
         next(e)
     }
