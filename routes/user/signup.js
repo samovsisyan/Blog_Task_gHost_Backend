@@ -23,12 +23,6 @@ router.post('/', function(req, res){
         res.status("400");
         res.send("Invalid details!");
     }
-        // Users.filter(function(user){
-        //     if(user.username === req.body.username){
-        //         res.render('user/signup/Create', {
-        //             message: "User Already Exists! Login or choose another user id"});
-        //     }
-        // });
     const newUser = {
                     username: req.body.username,
                     password: md5(req.body.password),

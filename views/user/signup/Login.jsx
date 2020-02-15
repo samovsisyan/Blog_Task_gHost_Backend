@@ -5,17 +5,17 @@ class Create extends Component {
 
         return (
             <div>
-             <h1>LOgin </h1>
-                {/*<form  method="POST">*/}
+             {/*<h1>LOgin </h1>*/}
+                <form  method="POST">
 
-                {/*    <label>username *</label>*/}
-                {/*    <input name = "username" type = "text" required placeholder = "Username"/>*/}
+                    <label>username *</label>
+                    <input name = "username" type = "text" required placeholder = "Username"/>
 
-                {/*    <label>password *</label>*/}
-                {/*    <input name = "password" type = "password" required placeholder = "Password"/>*/}
+                    <label>password *</label>
+                    <input name = "password" type = "password" required placeholder = "Password"/>
 
-                {/*    <button>Log in</button>*/}
-                {/*</form>*/}
+                    <button>Log in</button>
+                </form>
 
 
             </div>

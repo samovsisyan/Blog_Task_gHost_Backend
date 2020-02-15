@@ -8,10 +8,10 @@ class Create extends Component {
             <div>
                 <h2>Protected_page</h2>
                 <div>
-                    Hey  How are you doing today?
+                    Hey ${username}  How are you doing today?
                     Want to log out?
                     <div>
-                        <a href="">Logaout</a>
+                        <a href="/user/login/logout">Logaout</a>
                     </div>
                 </div>
 

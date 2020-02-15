@@ -42,6 +42,7 @@ router.use('/admin/user', require('./admin/user'));
 
 router.use('/user/signin', require('./user/signin'));
 router.use('/user/signup', require('./user/signup'));
+router.use('/user/login', require('./user/login'));
 
 // router.use('/lang', require('./lang/index'));
 // router.use('/lang/am', require('./lang/am'));
