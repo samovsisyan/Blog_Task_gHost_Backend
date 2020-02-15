@@ -17,12 +17,17 @@ class Create extends Component {
                 {/*    </ul>*/}
                 {/*))}*/}
 
-                <form action="/signup" method="POST" >
+                <form method="POST" >
                     <label>username *</label>
-                    <input name = "id" type = "text" required placeholder = "User ID" name="username" />
+                    <input name = "username" type = "text" required placeholder = "username" name="username" />
 
                     <label>password *</label>
                     <input name = "password" type = "password" required placeholder = "Password" name="password" />
+
+                    <label>email *</label>
+                    <input name = "email" type = "text" required placeholder = "Email" name="email" />
+
+
 
                     <button>Signup</button>
                 </form>

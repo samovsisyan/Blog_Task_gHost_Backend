@@ -6,6 +6,9 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const allowOrigin = require('./middleware/allowOrigin');
 // const checkSignIn = require('./middleware/checkSignIn');
+const session = require('express-session');
+
+
 
 
 const app = express();
@@ -50,6 +53,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'assets')));
+app.use(session({secret: "user"}));
 
 app.use('/', indexRouter);
 app.use('/profile', profile);

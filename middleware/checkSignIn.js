@@ -1,7 +1,4 @@
-// const models = require('../models/Users');
-
-
-function checkSignIn(req, res){
+function checkSignIn(req, res, next){
     if(req.session.user){
         next();     //If session exists, proceed to page
     } else {

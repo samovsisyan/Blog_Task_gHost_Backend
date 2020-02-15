@@ -3,6 +3,8 @@ const Users = require('../../models/Users');
 const express = require('express');
 const router = express.Router();
 const checkSignIn = require('../../middleware/checkSignIn');
+const md5 = require('md5');
+
 
 
 
@@ -16,37 +18,71 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.post('/signup', function(req, res){
-    if(!req.body.id || !req.body.password){
+router.post('/', function(req, res){
+    if(!req.body.username || !req.body.password){
         res.status("400");
         res.send("Invalid details!");
-    } else {
-        Users.filter(function(user){
-            if(user.id === req.body.id){
-                res.render('user/signup/Create', {
-                    message: "User Already Exists! Login or choose another user id"});
-            }
-        });
-        const newUser = {id: req.body.id, password: req.body.password};
-        Users.push(newUser);
-        req.session.user = newUser;
-        res.redirect('user/signup/Protected_page');
+    }
+        // Users.filter(function(user){
+        //     if(user.username === req.body.username){
+        //         res.render('user/signup/Create', {
+        //             message: "User Already Exists! Login or choose another user id"});
+        //     }
+        // });
+    const newUser = {
+                    username: req.body.username,
+                    password: md5(req.body.password),
+                    email: req.body.email};
+
+    Users.create(newUser);
+    req.session.user = newUser;
+    res.redirect('signup/Protected_page');
+
+});
+
+// router.get('/protected_page', checkSignIn, function(req, res){
+//     res.render('user/signup/Protected_page', {username: req.session.user.username})
+// });
+
+router.get('/protected_page', checkSignIn, async (req, res, next) => {
+    try {
+
+        res.render('user/signup/Protected_page', {username: req.session.user.username})
+
+    } catch (e) {
+        next(e)
     }
 });
 
 
+router.get('/login', async (req, res, next) => {
+    try {
+
+        res.render('user/signup/Login');
+
+    } catch (e) {
+        next(e)
+    }
+});
 
 
-
-//
-// router.get('/protected_page', checkSignIn, function(req, res){
-//     res.render('user/signup/protected_page', {id: req.session.user.id})
+// app.post('/login', function(req, res){
+//     console.log(Users);
+//     if(!req.body.id || !req.body.password){
+//         res.render('login', {message: "Please enter both id and password"});
+//     } else {
+//         Users.filter(function(user){
+//             if(user.id === req.body.id && user.password === req.body.password){
+//                 req.session.user = user;
+//                 res.redirect('/protected_page');
+//             }
+//         });
+//         res.render('login', {message: "Invalid credentials!"});
+//     }
 // });
-//
-//
-// router.get('/login', function(req, res){
-//     res.render('login');
-// });
+
+
+
 
 
 

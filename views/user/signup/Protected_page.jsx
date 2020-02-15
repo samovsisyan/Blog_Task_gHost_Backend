@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 class Create extends Component {
     render() {
-        const {user} = this.props;
-        console.log(user,55555555555555555)
+        const {username} = this.props;
+        console.log(username,55555555555555555)
         return (
             <div>
                 <h2>Protected_page</h2>
@@ -11,7 +11,7 @@ class Create extends Component {
                     Hey  How are you doing today?
                     Want to log out?
                     <div>
-                        Logout
+                        <a href="">Logaout</a>
                     </div>
                 </div>
 
