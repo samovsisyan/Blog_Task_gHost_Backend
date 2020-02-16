@@ -52,7 +52,8 @@ class Wrapper extends React.Component {
 
                     <body>
 
-
+                    <div className="project_blog">
+<div className="footer_background">
                     <div className="site-section subscribe bg-light">
                         <div className="container">
                             <form action="#" className="row align-items-center">
@@ -71,9 +72,10 @@ class Wrapper extends React.Component {
                             </form>
                         </div>
                     </div>
+                    </div>
 
 
-
+                    </div>
 
                     </body>
                     </html>

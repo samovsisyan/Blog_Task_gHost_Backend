@@ -1,98 +1,82 @@
-// import {useState} from "react";
-//
-// const React = require('react');
-// const Wrapper = require('./Header');
-// // import Admin from './pages/Admin';
-// // import Section from './pages/Section';
-// // const BlogDetails = require('./pages/BlogDetails');
-//
-// // import {I18nProvider, LOCALES} from './i18n';
-// // import { FormattedMessage } from 'react-intl';
-//
-// // import translate from "./i18n/translate";
-// // import counterpart from 'counterpart';
-// //
-// // import Translate from 'react-translate-component'
-// // import en from "./lang/en";
-// // import ru from "./lang/ru";
-// //
-// // counterpart.registerTranslations('en', en);
-// // counterpart.registerTranslations('ru', ru);
-// //
-// // counterpart.setLocale('en');
-// //
-// //
-// // const Link = (props) => {
-// //     return (
-// //     <Translate
-// //         content={props.content}
-// //         component="a"
-// //         href="//google.com"
-// //         target= "_blank"
-// //     />
-// // )
-// // }
-//
-// class Home extends React.Component {
-// // constructor(props) {
-// //     super(props);
-// //     this.state = {
-// //         lang: "en"
-// //     };
-// // }
-// //
-// //
-// //     onLangChange (e) {
-// //         this.setState({lang: e.target.value})
-// //         counterpart.setLocale(e.target.value);
-// //
-// //     }
-//
-//     render() {
-//         // const link =<Link content="link" />
-//         // console.log(this.state,555555555555555555)
-//         // const placeholder = counterpart.translate("placeholder")
-//         return (
-//             <Wrapper>
-//                 <h2>Hello</h2>
-//                 {/*<h1>Hello Home react-translate-component</h1>*/}
-//
-//                 {/*<select value={this.state.lang} onChange={this.onLangChange}>*/}
-//                 {/*    <option value="en">EN</option>*/}
-//                 {/*    <option value="ru">RU</option>*/}
-//                 {/*</select>*/}
-//
-//                 {/*   <Translate content="title"  component ="h1" className="class" />*/}
-//
-//                 {/*   <Translate content="copy.p1"  component ="p" unsafe={true} />*/}
-//
-//                 {/*   <Translate content="copy.p2" component ="p" with={{link}} />*/}
-//
-//
-//                 {/*   <Translate component ="input"  type="text" attributes={{placeholder: "placeholder"}} />*/}
-//
-//
-//
-//                 {/*<I18nProvider locale = {locale}>*/}
-//                 {/*    /!*<Admin />*!/*/}
-//                 {/*    /!*<Section />*!/*/}
-//                 {/*    /!*<FormattedMessage id='hello' />*!/*/}
-//                 {/*    {translate("hello")}*/}
-//                 {/*    <h1>Hello Home </h1>*/}
-//                 {/*    {translate("edit", {path: <code>src/App.jsx</code>})}*/}
-//                 {/*    <button onClick={this.handleClick()}>FRENCH</button>*/}
-//                 {/*    /!*<button onClick={()=> setLocale(LOCALES.ELNGLISH)}>ELNGLISH</button>*!/*/}
-//                 {/*    /!*<button onClick={()=> setLocale(LOCALES.FRENCH)}>FRENCH</button>*!/*/}
-//
-//
-//                 {/*</I18nProvider>*/}
-//
-//
-//
-//             </Wrapper>
-//         )
-//     }
-// }
-//
-//
-// module.exports = Home;
+import {Link} from "@reach/router";
+
+const React = require('react');
+
+
+class Home extends React.Component {
+
+    render() {
+
+        const blog = this.props
+
+        return (
+            <div>
+
+                <html>
+                <head>
+                    <link rel="stylesheet" type="text/css" href="/grid/display_grid.css"/>
+
+                </head>
+
+                <body>
+                <div id="project_blog">
+                    <div className="grid">
+                        <header>
+                            <div className="blog_img_logo">
+                                <img src="/images/blog.jpg" alt="Img Blog"/>
+                            </div>
+                            <div className="blog_manu">
+
+                                <Link to="index.html">Home</Link>
+
+
+                                <Link to="categories.html">Categories</Link>
+
+
+                                <Link to="categories.html">Politics</Link>
+
+
+                                <Link to="categories.html">Business</Link>
+
+
+                                <Link to="categories.html">Health</Link>
+
+                                <Link to="categories.html">Design</Link>
+
+                                <Link to="categories.html">Sport</Link>
+
+                                <Link to="contact.html">Contact</Link>
+
+
+                            </div>
+                        </header>
+
+                        <article><h1>Section</h1> Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the
+                        </article>
+
+
+
+                        <aside>
+                            <div>
+                                <div className="img_blog"
+                                     style={{backgroundImage: 'url(/images/person_1.jpg)'}}>
+                                </div>
+                                <h2><Link to="blog/details">Title</Link></h2>
+                                <p className="mb-3">short_description</p>
+                            </div>
+                        </aside>
+
+
+                        <footer>Footer</footer>
+                    </div>
+                </div>
+                </body>
+                </html>
+            </div>
+        )
+    }
+}
+
+module.exports = Home;
+
