@@ -122,7 +122,7 @@ class Home extends React.Component {
 
                                                     <Link to={`/admin/blog/delete/${blog.id}`}>
                                                 <button class="btn btn-danger btn-xs">
-                                                    <i class="fa fa-trash-o ">Delete</i>
+                                                    <i class="fa fa-trash-o "></i>
                                                 </button>
                                                     </Link>
 
@@ -138,17 +138,14 @@ class Home extends React.Component {
                     </section>
                 </section>
 
-                <footer class="site-footer">
-                    <div class="text-center">
+                <footer className="site-footer">
+                    <div className="text-center">
                         <p>
                             &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
                         </p>
-                        <div class="credits">
 
-                            Created with Dashio template by <Link to="https://templatemag.com/">TemplateMag</Link>
-                        </div>
                         <Link to="basic_table.html#" class="go-top">
-                            <i class="fa fa-angle-up"></i>
+                            <i className="fa fa-angle-up"></i>
                         </Link>
                     </div>
                 </footer>

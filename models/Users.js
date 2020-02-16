@@ -23,12 +23,6 @@ Users.init({
     password: {
         type: Sequelize.STRING,
         allowNull: false,
-        // get() {
-        //     return undefined
-        // },
-        // set(val) {
-        //     return md5(val)
-        // }
     },
     email: {
         type: Sequelize.STRING,
@@ -39,7 +33,7 @@ Users.init({
     role: {
         type: Sequelize.ENUM('admin', 'user'),
         allowNull: true,
-        defaultValue: "user",
+        // defaultValue: "user",
     },
     img: {
         type: Sequelize.STRING,

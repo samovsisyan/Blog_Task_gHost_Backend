@@ -111,10 +111,7 @@ class Create extends Component {
                         <p>
                             &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
                         </p>
-                        <div className="credits">
 
-                            Created with Dashio template by <Link to="https://templatemag.com/">TemplateMag</Link>
-                        </div>
                         <Link to="basic_table.html#" class="go-top">
                             <i className="fa fa-angle-up"></i>
                         </Link>

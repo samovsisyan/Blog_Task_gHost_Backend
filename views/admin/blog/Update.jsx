@@ -37,33 +37,33 @@ class Update extends Component {
                         <div className="row mt">
                             <div className="col-md-12">
                                 <div className="content-panel">
-                                        <h4><i className="fa fa-angle-right"></i> Update Table</h4>
-                                        <hr/>
+                                    <h4><i className="fa fa-angle-right"></i> Update Table</h4>
+                                    <hr/>
 
-                                            <form method="POST">
-                                                <div>
-                                                <label>Title</label>
-                                                    <input type="text" name="title" value={blog.title}/>
-                                                </div>
+                                    <form method="POST">
+                                        <div>
+                                            <label>Title</label>
+                                            <input type="text" name="title" value={blog.title}/>
+                                        </div>
 
-                                                <div>
-                                                <label>Description</label>
-                                                    <input type="text" name="description" value={blog.description}/>
-                                                </div>
+                                        <div>
+                                            <label>Description</label>
+                                            <input type="text" name="description" value={blog.description}/>
+                                        </div>
 
-                                                <div>
-                                                <label>Short Description</label>
-                                                    <input type="text" name="short_description" value={blog.short_description}/>
-                                                </div>
+                                        <div>
+                                            <label>Short Description</label>
+                                            <input type="text" name="short_description" value={blog.short_description}/>
+                                        </div>
 
-                                                <div>
-                                                <label>Img</label>
-                                                    <input type="text" name="img" value={blog.img}/>
-                                                </div>
-                                                <button className="btn btn-success btn-xs"><i
-                                                    className="fa fa-check">Update</i>
-                                                </button>
-                                            </form>
+                                        <div>
+                                            <label>Img</label>
+                                            <input type="text" name="img" value={blog.img}/>
+                                        </div>
+                                        <button className="btn btn-success btn-xs"><i
+                                            className="fa fa-check">Update</i>
+                                        </button>
+                                    </form>
 
 
                                 </div>
@@ -77,10 +77,7 @@ class Update extends Component {
                         <p>
                             &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
                         </p>
-                        <div className="credits">
 
-                            Created with Dashio template by <Link to="https://templatemag.com/">TemplateMag</Link>
-                        </div>
                         <Link to="basic_table.html#" class="go-top">
                             <i className="fa fa-angle-up"></i>
                         </Link>

@@ -78,7 +78,7 @@ router.post('/update/:id', async (req, res, next) => {
             img,
         } = req.body;
 
-        const user = await models.update({
+        await models.update({
             username,
             password,
             email,
@@ -94,6 +94,32 @@ router.post('/update/:id', async (req, res, next) => {
 
 });
 
+
+router.post('/user/:id', async (req, res, next) => {
+    try {
+        const userID = req.param('id');
+        await models.destroy({
+            where: {
+                "id": userID
+            }
+        });
+        res.redirect('admin/user')
+    } catch (e) {
+        next(e)
+    }
+});
+
+router.get('/delete/:id', async (req, res, next) => {
+    try {
+        const {id} = req.params;
+        await models.destroy({where: {id: id}});
+        res.redirect('/admin/user')
+
+
+    } catch (e) {
+        next(e)
+    }
+});
 
 
 

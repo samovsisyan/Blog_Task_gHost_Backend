@@ -80,7 +80,7 @@ router.post('/update/:id', async (req, res, next) => {
             img,
         } = req.body;
 
-        const blog = await models.update({
+        await models.update({
             title,
             description,
             short_description,
