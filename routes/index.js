@@ -29,7 +29,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use('/blog', require('./blog'));
-router.use('/adminblog', require('./adminblog'));
+router.use('/admin/home', require('./home'));
 router.use('/users', require('./users'));
 router.use('/comments', require('./comments'));
 router.use('/profile', require('./profile'));

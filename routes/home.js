@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
     try {
 
 
-        res.render('admin/Adminblog');
+        res.render('admin/Home');
     } catch (e) {
         next(e)
     }

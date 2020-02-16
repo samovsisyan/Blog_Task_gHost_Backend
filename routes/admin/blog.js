@@ -36,6 +36,7 @@ router.get('/update/:id', async (req, res, next) => {
         const {id} = req.params;
 
         const blog = await models.findOne({id:id});
+        console.log(blog)
         res.render('admin/blog/Update', {blog:blog})
     } catch (e) {
         next(e)
@@ -109,17 +110,17 @@ router.post('/blog/:id', async (req, res, next) => {
     }
 });
 
-// router.delete('/', async (req, res, next) => {
-//     try {
-//         const {id} = req.body;
-//         await models.destroy({where: {id}});
-//         res.json({
-//             status: 'ok',
-//         })
-//     } catch (e) {
-//         next(e)
-//     }
-// });
+router.get('/delete/:id', async (req, res, next) => {
+    try {
+        const {id} = req.params;
+        await models.destroy({where: {id: id}});
+        res.redirect('/admin/blog')
+
+
+    } catch (e) {
+        next(e)
+    }
+});
 
 
 
