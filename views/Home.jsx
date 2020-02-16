@@ -14,7 +14,10 @@ class Home extends React.Component {
             <div>
                 <Header/>
                 <div className="project_blog ">
-                    <h1>Task gHost</h1>
+                    <div>
+                        <Link to="admin/home">Admin</Link>
+                        <Link to="">Blog</Link>
+                    </div>
                 </div>
                 <Footer/>
             </div>

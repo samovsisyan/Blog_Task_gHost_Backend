@@ -33,10 +33,12 @@ router.post('/', async (req, res) => {
 
             if (user) {
                 req.session.user = user;
-                res.redirect('signup/Protected_page');
+                res.redirect('/admin/home');
             } else {
                 res.send("Not Login");
             }
+
+
 
             // Users.findOne(function(user){
             //     if(user.username === req.body.username && user.password === md5(req.body.password)){

@@ -36,6 +36,8 @@ router.use('/profile', require('./profile'));
 // router.use('/admin', require('./admin'));
 router.use('/admin', require('./admin/index'));
 router.use('/admin/blog', require('./admin/blog'));
+router.use('/admin/login', require('./admin/login'));
+
 
 router.use('/admin', require('./admin/index'));
 router.use('/admin/user', require('./admin/user'));

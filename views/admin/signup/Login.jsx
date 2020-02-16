@@ -5,11 +5,9 @@ import {Root} from 'react-static'
 import {Link} from '@reach/router'
 
 
-
 class Login extends React.Component {
 
     render() {
-        const {blog} = this.props;
 
         return (
             <div>
@@ -26,23 +24,29 @@ class Login extends React.Component {
                         <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 
 
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
 
-                        <link rel="stylesheet" type="text/css"href="/login_css/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-
-                        <link rel="stylesheet" type="text/css"href="/login_css/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" />
-
-
-                        <link rel="stylesheet" type="text/css"href="/login_css/vendor/css-hamburgers/hamburgers.min.css" />
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"/>
 
 
-                        <link rel="stylesheet" type="text/css" href="/login_css/css/util.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/css/main.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/bootstrap/css/bootstrap.min.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/bootstrap/css/bootstrap-grid.main.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/animate/animate.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/css-hamburgers/hamburgers.min.css" />
-                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/select2/select2.min.css" />
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/vendor/css-hamburgers/hamburgers.min.css"/>
+
+
+                        <link rel="stylesheet" type="text/css" href="/login_css/css/util.css"/>
+                        <link rel="stylesheet" type="text/css" href="/login_css/css/main.css"/>
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/vendor/bootstrap/css/bootstrap.min.css"/>
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/vendor/bootstrap/css/bootstrap-grid.main.css"/>
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/vendor/bootstrap/css/bootstrap-reboot.min.css"/>
+                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/animate/animate.css"/>
+                        <link rel="stylesheet" type="text/css"
+                              href="/login_css/vendor/css-hamburgers/hamburgers.min.css"/>
+                        <link rel="stylesheet" type="text/css" href="/login_css/vendor/select2/select2.min.css"/>
 
 
                     </head>
@@ -52,26 +56,28 @@ class Login extends React.Component {
                         <div className="container-login100"
                              style={{backgroundImage: 'url(/images/img-01.jpg)'}}>
                             <div className="wrap-login100 p-t-190 p-b-30">
-                                <form method="POST" className="login100-form validate-form" >
+                                <form method="POST" className="login100-form validate-form">
                                     <div className="login100-form-avatar">
-                                        <img src="images/avatar-01.jpg" alt="AVATAR" />
+                                        <img src="images/avatar-01.jpg" alt="AVATAR"/>
                                     </div>
                                     <span className="login100-form-title p-t-20 p-b-45">
 John Doe
 </span>
                                     <div className="wrap-input100 validate-input m-b-10"
                                          data-validate="Username is required">
-                                        <input className="input100" type="text" required name="username" placeholder="Username" />
-                                            <span className="focus-input100"></span>
-                                            <span className="symbol-input100">
+                                        <input className="input100" type="text" required name="username"
+                                               placeholder="Username"/>
+                                        <span className="focus-input100"></span>
+                                        <span className="symbol-input100">
 <i className="fa fa-user"></i>
 </span>
                                     </div>
                                     <div className="wrap-input100 validate-input m-b-10"
                                          data-validate="Password is required">
-                                        <input className="input100" type="password" required name="password" placeholder="Password" />
-                                            <span className="focus-input100"></span>
-                                            <span className="symbol-input100">
+                                        <input className="input100" type="password" required name="password"
+                                               placeholder="Password"/>
+                                        <span className="focus-input100"></span>
+                                        <span className="symbol-input100">
 <i className="fa fa-lock"></i>
 </span>
                                     </div>
@@ -106,11 +112,11 @@ John Doe
                 </Root>
 
             </div>
-    )
+        )
     }
-    }
+}
 
-    module.exports = Login;
+module.exports = Login;
 
 
 

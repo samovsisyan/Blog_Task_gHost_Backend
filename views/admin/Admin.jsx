@@ -34,8 +34,6 @@ class Admin extends React.Component {
 
                     <body>
 
-
-
                     </body>
                     </html>
                 </Root>

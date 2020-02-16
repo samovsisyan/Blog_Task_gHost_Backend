@@ -31,12 +31,15 @@ router.post('/', async (req, res) => {
                     }
                 });
 
-            if (user) {
-                req.session.user = user;
-                res.redirect('signup/Protected_page');
-            } else {
-                res.send("Not Login");
-            }
+            // if (user) {
+            //     req.session.user = user;
+            //     res.redirect('signup/Protected_page');
+            // } else {
+            //     res.send("Not Login");
+            // }
+
+            res.redirect('/blog')
+
 
             // Users.findOne(function(user){
             //     if(user.username === req.body.username && user.password === md5(req.body.password)){
