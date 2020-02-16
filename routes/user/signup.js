@@ -30,7 +30,7 @@ router.post('/', function(req, res){
 
     Users.create(newUser);
     req.session.user = newUser;
-    res.redirect('signup/Protected_page');
+    res.redirect('signup/Login');
 
 });
 
