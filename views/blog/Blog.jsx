@@ -44,7 +44,7 @@ class Section extends React.Component {
                                                             <div className="post-meta">
                                                                 <span className="d-block"><Link
                                                                     to="#">USER ID</Link></span>
-                                                                <span className="date-read">Jun 14 <span
+                                                                <span className="date-read">{blog.created_at}<span
                                                                     className="mx-1">•</span> 3 min read <span
                                                                     className="icon-star2">Span</span></span>
                                                             </div>

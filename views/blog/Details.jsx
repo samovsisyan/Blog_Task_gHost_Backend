@@ -20,8 +20,9 @@ class Details extends React.Component {
         return (
             <div>
                 <Header />
-                <div>
-                    <div>
+                <div className="project_blog ">
+                    <div className="blog_background">
+
 
                         <div className="site-section">
                             <div className="container">
@@ -74,7 +75,6 @@ class Details extends React.Component {
                                                             </div>
                                                         ))}
 
-                                                        <p><Link to="#" className="reply">Reply</Link></p>
                                                     </div>
 
                                                 </li>
@@ -87,7 +87,7 @@ class Details extends React.Component {
                                                     <h2 className="mb-5">Leave a comment</h2>
                                                 </div>
 
-                                                <form action="/comments" method="POST" className="p-5 bg-light">
+                                                <form  method="POST" className="p-5 bg-light">
                                                     <div className="form-group">
                                                         <label htmlFor="name">Name *</label>
                                                         <input type="text" name="name" className="form-control"
