@@ -59,17 +59,15 @@ class Header extends React.Component {
                         </div>
                         <div className="blog_manu">
 
-                            <Link to="index.html">Home</Link>
+                            <Link to="/">Home</Link>
 
-                            <Link to="categories.html">Politics</Link>
-
-                            <Link to="categories.html">Business</Link>
-
-                            <Link to="categories.html">Sport</Link>
-                            <Link to="categories.html">Sport</Link>
+                            <Link to="/blog">Blog</Link>
 
                             <Link to="contact.html">Contact</Link>
 
+                            <Link to="/user/signup">Sign Up</Link>
+
+                            <Link to="/user/login">Sign In</Link>
 
                         </div>
                         </div>

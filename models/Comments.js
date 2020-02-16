@@ -33,11 +33,11 @@ Comments.init({
         type: Sequelize.BIGINT,
         allowNull: false
     },
-    // created_at: {
-    //     type: Sequelize.DATE,
-    //     allowNull: false,
-    //     defaultValue: Sequelize.NOW
-    // },
+    created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.NOW
+    },
 
 
 

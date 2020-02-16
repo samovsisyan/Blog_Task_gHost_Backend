@@ -87,7 +87,7 @@ class Details extends React.Component {
                                                     <h2 className="mb-5">Leave a comment</h2>
                                                 </div>
 
-                                                <form  method="POST" className="p-5 bg-light">
+                                                <form action="/comments" method="POST" className="p-5 bg-light">
                                                     <div className="form-group">
                                                         <label htmlFor="name">Name *</label>
                                                         <input type="text" name="name" className="form-control"

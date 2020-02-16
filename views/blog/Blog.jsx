@@ -10,7 +10,7 @@ import Footer from "../Footer";
 class Section extends React.Component {
 
     render() {
-        const {blog,} = this.props;
+        const {blog} = this.props;
 
         return (
             <div data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"

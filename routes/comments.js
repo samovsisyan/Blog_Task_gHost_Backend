@@ -15,7 +15,10 @@ router.post('/', async (req, res, next) => {
             blog_id,
         });
 
-        res.redirect('/blog/Blog');
+        res.send({
+            status: "ok",
+            message: "create comments"
+        })
 
     } catch (e) {
         next(e)
