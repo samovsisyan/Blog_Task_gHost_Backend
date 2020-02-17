@@ -12,7 +12,7 @@ import { Link } from '@reach/router'
 
 
 
-class Wrapper extends React.Component {
+class Footer extends React.Component {
 
     render() {
 
@@ -85,4 +85,4 @@ class Wrapper extends React.Component {
         )
     }
 }
-module.exports = Wrapper;
+module.exports = Footer;

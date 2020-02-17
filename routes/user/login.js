@@ -31,14 +31,14 @@ router.post('/', async (req, res) => {
                     }
                 });
 
-            // if (user) {
-            //     req.session.user = user;
-            //     res.redirect('signup/Protected_page');
-            // } else {
-            //     res.send("Not Login");
-            // }
+            if (user) {
+                req.session.user = user;
+                res.redirect('/blog');
+            } else {
+                res.redirect('login');
+            }
 
-            res.redirect('/blog')
+
 
 
             // Users.findOne(function(user){

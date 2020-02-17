@@ -35,9 +35,8 @@ router.post('/', async (req, res) => {
                 req.session.user = user;
                 res.redirect('/admin/home');
             } else {
-                res.send("Not Login");
+                res.redirect("/admin/login");
             }
-
 
 
             // Users.findOne(function(user){

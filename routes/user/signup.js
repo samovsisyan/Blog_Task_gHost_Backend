@@ -30,7 +30,7 @@ router.post('/', function(req, res){
 
     Users.create(newUser);
     req.session.user = newUser;
-    res.redirect('signup/Login');
+    res.redirect('login');
 
 });
 
@@ -49,15 +49,7 @@ router.get('/protected_page', checkSignIn, async (req, res, next) => {
 });
 
 
-router.get('/login', async (req, res, next) => {
-    try {
 
-        res.render('user/signup/Login');
-
-    } catch (e) {
-        next(e)
-    }
-});
 
 
 // app.post('/login', function(req, res){

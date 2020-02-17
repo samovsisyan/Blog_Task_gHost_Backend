@@ -12,7 +12,6 @@ const router = express.Router();
 router.use('/blog', require('./blog'));
 router.use('/user', require('./user'));
 router.use('/login', require('./login'));
-router.use('/signup', require('./signup'));
 router.use('/home', require('./home'));
 
 
