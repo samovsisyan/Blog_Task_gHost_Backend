@@ -139,7 +139,6 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #f8f9fa!important;
-
 }
 /*CSS & MEDIA HEADER START*/
 
@@ -212,6 +211,22 @@
 
 .footer_background {
     background-color: #f8f9fa!important;
+}
+
+
+.background_home_section {
+    display: grid;
+    /*border: 1px solid black;*/
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f9fa!important;
+}
+
+.home_page_css {
+    display: grid;
+    margin-left: 31%;
+    margin-top: 10%;
 }
 
 

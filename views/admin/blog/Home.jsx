@@ -116,13 +116,13 @@ class Home extends React.Component {
 
                                                 <Link to={`/admin/blog/update/${blog.id}`}>
                                                     <button class="btn btn-primary btn-xs">
-                                                         <i class="fa fa-pencil"></i>
+                                                         <i class="fa fa-pencil">Update</i>
                                                     </button>
                                                 </Link>
 
                                                     <Link to={`/admin/blog/delete/${blog.id}`}>
                                                 <button class="btn btn-danger btn-xs">
-                                                    <i class="fa fa-trash-o "></i>
+                                                    <i class="fa fa-trash-o ">Delete</i>
                                                 </button>
                                                     </Link>
 

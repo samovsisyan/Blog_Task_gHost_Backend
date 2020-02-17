@@ -100,8 +100,10 @@ class Details extends React.Component {
                                                                   className="form-control"></textarea>
                                                         <input type="hidden" name="blog_id" value={blog.id}/>
                                                         <input type="hidden" name="user_id" value="1"/>
-                                                        <button onclick="redirect()" value="Redirect">Comments</button>
-                                                    </div>
+
+                                                            <button>Commensssssssssts</button>
+
+                                                        </div>
                                                 </form>
                                             </div>
                                         </div>

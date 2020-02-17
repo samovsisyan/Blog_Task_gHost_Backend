@@ -50,33 +50,33 @@ class Home extends React.Component {
 
                                             <th>
                                                 <i>
-                                                    User Name
+                                                    Name
                                                 </i>
                                             </th>
 
 
                                             <th>
                                                 <i>
-                                                    Password
+                                                    Description
                                                 </i>
                                             </th>
 
                                             <th>
                                                 <i>
-                                                    Email
+                                                    User Id
                                                 </i>
                                             </th>
 
 
                                             <th>
                                                 <i>
-                                                    Role
+                                                    Blog Id
                                                 </i>
                                             </th>
 
                                             <th>
                                                 <i>
-                                                    Img
+                                                    Created At
                                                 </i>
                                             </th>
 
@@ -111,7 +111,7 @@ class Home extends React.Component {
                                                     {comments.created_at}
                                                 </td>
                                                 <td>
-                                                    
+
 
                                                     <Link to={`/admin/comments/delete/${comments.id}`}>
                                                         <button class="btn btn-danger btn-xs">

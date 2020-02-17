@@ -44,7 +44,7 @@ class Home extends React.Component {
                                      data-original-title="Toggle Navigation"></div>
                             </div>
 
-                            <Link to="index.html" className="logo"><b>DASH<span>IO</span></b></Link>
+                            <Link to="/admin/home" className="logo"><b>DASH<span>IO</span></b></Link>
 
                             <div className="top-menu">
                                 <ul className="nav pull-right top-menu">

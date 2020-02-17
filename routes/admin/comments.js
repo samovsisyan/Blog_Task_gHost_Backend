@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const models = require('../../models/Comments');
+const blog = require('../../models/Blog');
 const express = require('express');
 const router = express.Router();
 
@@ -21,6 +22,8 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
+        const blog = await models.findOne({});
+
         const {description, user_id, blog_id, name} = req.body;
 
         await models.create({
@@ -30,10 +33,7 @@ router.post('/', async (req, res, next) => {
             blog_id,
         });
 
-        res.send({
-            status: "ok",
-            message: "create comments"
-        })
+        res.redirect(`blog/details/${blog.id}`)
 
     } catch (e) {
         next(e)
