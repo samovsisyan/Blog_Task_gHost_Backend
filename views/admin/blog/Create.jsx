@@ -74,7 +74,7 @@ class Create extends Component {
                                     <h4><i className="fa fa-angle-right"></i> Update Table</h4>
                                     <hr/>
 
-                                    <form method="POST">
+                                    <form className="admin_blog_css" method="POST">
                                         <div>
                                             <label>Title</label>
                                             <input type="text" name="title" />

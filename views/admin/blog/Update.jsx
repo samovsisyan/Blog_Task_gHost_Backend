@@ -40,7 +40,7 @@ class Update extends Component {
                                     <h4><i className="fa fa-angle-right"></i> Update Table</h4>
                                     <hr/>
 
-                                    <form method="POST">
+                                    <form className="admin_blog_css" method="POST">
                                         <div>
                                             <label>Title</label>
                                             <input type="text" name="title" value={blog.title}/>
@@ -59,6 +59,10 @@ class Update extends Component {
                                         <div>
                                             <label>Img</label>
                                             <input type="text" name="img" value={blog.img}/>
+                                        </div>
+
+                                        <div>
+                                            <input type="hidden" name="id" value={blog.id}/>
                                         </div>
                                         <button className="btn btn-success btn-xs"><i
                                             className="fa fa-check">Update</i>

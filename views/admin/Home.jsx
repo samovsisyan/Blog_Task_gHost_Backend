@@ -56,31 +56,39 @@ class Home extends React.Component {
                         <aside>
                             <div id="sidebar" className="nav-collapse ">
                                 <ul className="sidebar-menu" id="nav-accordion">
-                                    <p className="centered"><Link to="profile.html">
-                                        <img src="img/ui-sam.jpg" className="img-circle"/></Link></p>
+                                    <p className="centered"><Link to="profile.html"><img src="img/ui-sam.jpg"
+                                                                                         className="img-circle"
+                                    /></Link></p>
                                     <h5 className="centered">Sam Soffes</h5>
+
+
+
+
                                     <li className="sub-menu">
-                                        <Link className="active" to="admin/blog">
+                                        <Link className="active" to="/admin/blog">
                                             <i className="fa fa-tasks"></i>
                                             <span>Form Blog</span>
                                         </Link>
                                     </li>
 
                                     <li className="sub-menu">
-                                        <Link className="active" to="admin/user">
+                                        <Link className="active" to="/admin/user">
                                             <i className="fa fa-tasks"></i>
                                             <span>Form User</span>
                                         </Link>
                                     </li>
 
-
-
+                                    <li className="sub-menu">
+                                        <Link className="active" to="/admin/comments">
+                                            <i className="fa fa-tasks"></i>
+                                            <span>Form Comments</span>
+                                        </Link>
+                                    </li>
 
 
                                 </ul>
                             </div>
                         </aside>
-
 
 
                         <footer class="site-footer">

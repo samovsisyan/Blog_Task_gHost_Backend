@@ -11,7 +11,7 @@ class Home extends React.Component {
                  data-aos-duration="800" data-aos-delay="0">
                 <Header/>
 
-                <h1> Hello</h1>
+                <h1> Contact</h1>
                 <Footer/>
             </div>
         )

@@ -17,24 +17,26 @@ Blog.init({
     },
     title: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
 
     },
     description: {
-        type: Sequelize.STRING,
-        allowNull: false
+        type: Sequelize.TEXT,
+        allowNull: true
 
     },
     short_description: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
 
     },
 
     created_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW
+        type: Sequelize.STRING,
+        allowNull: true,
+        // defaultValue: Sequelize.NOW
+
+
     },
     // updated_at: {
     //     type: Sequelize.STRING,
@@ -43,7 +45,7 @@ Blog.init({
 
     img: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
 
     }
 

@@ -113,7 +113,7 @@ class Create extends Component {
                                     <h4><i className="fa fa-angle-right"></i> Update Table</h4>
                                     <hr/>
 
-                                    <form method="POST">
+                                    <form className="admin_user_css" method="POST">
                                         <div>
                                             <label>User Name</label>
                                             <input type="text" name="username" />
@@ -121,7 +121,7 @@ class Create extends Component {
 
                                         <div>
                                             <label>Password</label>
-                                            <input type="text" name="password" />
+                                            <input type="password" name="password" />
                                         </div>
 
                                         <div>

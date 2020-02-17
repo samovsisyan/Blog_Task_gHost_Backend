@@ -92,7 +92,6 @@ router.post('/update/:id', async (req, res, next) => {
     } catch (e) {
         next(e)
     }
-
 });
 
 

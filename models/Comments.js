@@ -19,24 +19,23 @@ Comments.init({
     },
     name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     description: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     user_id: {
         type: Sequelize.BIGINT,
-        allowNull: false
+        allowNull: true
     },
     blog_id: {
         type: Sequelize.BIGINT,
-        allowNull: false
+        allowNull: true
     },
     created_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW
+        type: Sequelize.STRING,
+        allowNull: true,
     },
 
 

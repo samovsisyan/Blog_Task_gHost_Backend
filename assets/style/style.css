@@ -13,3 +13,14 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.admin_user_css{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.admin_blog_css{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}

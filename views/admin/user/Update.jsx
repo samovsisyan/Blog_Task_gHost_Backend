@@ -79,7 +79,7 @@ class Update extends Component {
                                     <h4><i className="fa fa-angle-right"></i> Update Table</h4>
                                     <hr/>
 
-                                    <form method="POST">
+                                    <form className="admin_user_css" method="POST">
                                         <label>username *</label>
                                         <input type="text" name="username" value={user.username}/>
 
