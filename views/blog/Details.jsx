@@ -1,5 +1,4 @@
 const React = require('react');
-const Wrapper = require('../Header');
 import {Link} from "@reach/router";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -32,7 +31,7 @@ class Details extends React.Component {
                                             <img src="/images/big_img_1.jpg" alt="Image" className="img-fluid"/>
                                         </p>
                                         <h1 className="mb-4">
-                                            News Needs to Meet Its Audiences Where They Are
+                                            {blog.title}
                                         </h1>
                                         <div className="post-meta d-flex mb-5">
                                             <div className="bio-pic mr-3">

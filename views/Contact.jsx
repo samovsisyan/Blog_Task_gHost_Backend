@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 
-class Home extends React.Component {
+class Contact extends React.Component {
 
     render() {
         return (
@@ -71,4 +71,4 @@ class Home extends React.Component {
     }
 }
 
-module.exports = Home;
+module.exports = Contact;

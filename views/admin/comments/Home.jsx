@@ -89,9 +89,9 @@ class Home extends React.Component {
 
                                         </tr>
                                         </thead>
-                                        <Link to="/admin/user/create">
+                                        <Link to="/admin/comments/create">
                                             <button className="btn btn-success btn-xs"><i className="fa fa-check">Create
-                                                User</i>
+                                                Comments</i>
                                             </button>
                                         </Link>
                                         {comments.map((comments) => (

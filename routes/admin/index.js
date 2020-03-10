@@ -24,3 +24,12 @@ router.get('/', function(req, res, next) {
 
 
 module.exports = router;
+
+
+// module.exports = {
+//     comments: require('./comments'),
+//     user: require('./user'),
+//     blog: require('./blog'),
+//     home: require('./home'),
+//     login: require('./login'),
+// };
