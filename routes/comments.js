@@ -25,7 +25,12 @@ router.get('/', async (req, res, next) => {
 router.post('/create', async (req, res, next) => {
     try {
 
-        const {name, description, user_id, blog_id} = req.body;
+        // const { name, description, user_id, blog_id } = req.param("id");
+        // const name = req.param("name");
+        // const description = req.param("description");
+        // const user_id = req.param("user_id");
+        // const blog_id = req.param("blog_id");
+        const { name, description, user_id, blog_id } = req.body;
 
         const comments = await models.create({
             name,

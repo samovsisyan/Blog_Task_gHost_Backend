@@ -19,63 +19,67 @@ router.get('/', async (req, res, next) => {
 
 
 
-router.put('/', async (req, res, next) => {
+router.post('/create', async (req, res, next) => {
     try {
-        const {
-            username,
-            password,
-            email,
-            role,
 
-        } = req.body;
+        // const { name, description, user_id, blog_id } = req.param("id");
+        // const name = req.param("name");
+        // const description = req.param("description");
+        // const user_id = req.param("user_id");
+        // const blog_id = req.param("blog_id");
+        const {  username, password, email, role, img } = req.body;
+ 
         const users = await models.create({
             username,
             password,
             email,
             role,
+            img
         });
-        res.json({
-            status: 'ok',
-            users,
+
+        res.send({
+            status: "ok",
+            users
         })
 
     } catch (e) {
         next(e)
+
     }
 });
 
 
-router.post('/', async (req, res, next) => {
-    try {
-        const {
-            id,
-            username,
-            password,
-            email,
-            role,
-        } = req.body;
-        const users = await models.update({
-            username,
-            password,
-            email,
-            role,
-        }, {where: {id}});
-        res.json({
-            status: 'ok',
-            users: {
-                id,
-                username,
-                password,
-                email,
-                role,
-            },
-        });
-
-    } catch (e) {
-        next(e)
-    }
-
-});
+// router.post('/', async (req, res, next) => {
+//     try {
+//         const {
+//             id,
+//             username,
+//             password,
+//             email,
+//             role,
+//         } = req.body;
+//         const users = await models.update({
+//             username,
+//             password,
+//             email,
+//             role,
+//         }, {where: {id}});
+//         res.json({
+//             status: 'ok',
+//             users: {
+//                 id,
+//                 username,
+//                 password,
+//                 email,
+//                 role,
+//             },
+//         });
+//
+//     } catch (e) {
+//         next(e)
+//     }
+//
+// });
 
 
 router.delete('/', async (req, res, next) => {

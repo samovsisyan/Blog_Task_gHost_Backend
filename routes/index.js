@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.use('/blog', require('./blog'));
 router.use('/users', require('./users'));
+router.use('/user', require('./user'));
 
 // router.get('/blog', function(req, res, next) {
 //   res.render('Hello');
@@ -21,6 +22,7 @@ module.exports = {
   types: require('./blog'),
   regions: require('./admin/comments'),
   comments: require('./comments'),
+  user: require('./user'),
   // regions: require('./admin'),
 
 };
@@ -29,6 +31,8 @@ module.exports = {
 router.use('/blog', require('./blog'));
 router.use('/admin/home', require('./home'));
 router.use('/users', require('./users'));
+router.use('/user', require('./user'));
+
 router.use('/admin_comments', require('./admin/comments'));
 router.use('/profile', require('./profile'));
 // router.use('/admin', require('./admin'));
