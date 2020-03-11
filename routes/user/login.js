@@ -2,7 +2,11 @@ const Sequelize = require('sequelize');
 const Users = require('../../models/Users');
 const express = require('express');
 const router = express.Router();
+const {jwtSecret} = require('../../config');
+const {secret} = require('../../config');
 const md5 = require('md5');
+const jwt = require('jsonwebtoken');
+
 
 
 router.get('/', async (req, res, next) => {
@@ -16,43 +20,29 @@ router.get('/', async (req, res, next) => {
 });
 
 
-router.post('/', async (req, res) => {
+router.post('/register', function (req, res,next) {
     try {
-        console.log(Users);
-        if (!req.body.username || !req.body.password) {
-            res.render('login', {message: "Please enter both id and password"});
-        } else {
+        // const hashedPassword = bcrypt.hashSync(req.body.password, 8);
+        const token = jwt.sign({id: Users.id}, secret, {
+            expiresIn: 86400 // expires in 24 hours
+        })
 
-          const user  =  await Users.findOne(
-                {
-                    where: {
-                        username: req.body.username,
-                        password: md5(req.body.password),
-                    }
-                });
+        Users.create({
+            username: req.body.username,
+            password: md5(req.body.password),
 
-            if (user) {
-                req.session.user = user;
-                res.redirect('/blog');
-            } else {
-                res.redirect('login');
-            }
+        }),
 
 
+            res.status(200).send({auth: true, token: token});
 
 
-            // Users.findOne(function(user){
-            //     if(user.username === req.body.username && user.password === md5(req.body.password)){
-            //         req.session.user = user;
-            //         res.redirect('signup/protected_page');
-            //     }
-            // });
-            // res.render('signup/Protected_page', {message: "Invalid credentials!"});
-        }
     } catch (e) {
         next(e)
     }
 });
+
+
 
 router.get('/logout', function(req, res){
     req.session.destroy(function(){
