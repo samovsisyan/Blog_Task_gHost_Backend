@@ -28,12 +28,16 @@ router.get('/', async (req, res, next) => {
 });
 
 
-router.post('/register', function (req, res, next) {
+router.post('/register', async (req, res, next) => {
     try {
 
-        Users.create({
+
+       Users.create({
             username: req.body.username,
-            password: req.body.password,
+            password: md5(req.body.password),
+            email: req.body.email,
+            role: req.body.role,
+            img: req.body.img,
 
         });
 
@@ -41,40 +45,47 @@ router.post('/register', function (req, res, next) {
         const token = jwt.sign({id: Users.id}, secret, {
             expiresIn: 86400 // expires in 24 hours
         });
+
+        const users = await Users.findAll({})
+
         req.session.token = token;
-        return res.status(200).send({auth: true, token: token});
-
-
-    } catch (e) {
-        next(e)
-    }
-});
-
-
-router.get('/me', function (req, res, next) {
-    try {
-
-        const token = req.headers['x-access-token'];
-        if (!token) return res.status(401).send({auth: false, message: 'No token provided.'});
-
-        jwt.verify(token, config.secret, function (err, decoded) {
-            if (err) return res.status(500).send({auth: false, message: 'Failed to authenticate token.'});
-
-            res.status(200).send(decoded);
-
-            Users.findById(decoded.id, function (err, user) {
-                if (err) return res.status(500).send("There was a problem finding the user.");
-                if (!user) return res.status(404).send("No user found.");
-
-                res.status(200).send(user);
-            });
-
+        return res.status(200).send({
+            auth: true,
+            token: token,
+            users:users
         });
 
+
     } catch (e) {
         next(e)
     }
 });
+
+
+// router.get('/me', function (req, res, next) {
+//     try {
+//
+//         const token = req.headers['x-access-token'];
+//         if (!token) return res.status(401).send({auth: false, message: 'No token provided.'});
+//
+//         jwt.verify(token, config.secret, function (err, decoded) {
+//             if (err) return res.status(500).send({auth: false, message: 'Failed to authenticate token.'});
+//
+//             res.status(200).send(decoded);
+//
+//             Users.findById(decoded.id, function (err, user) {
+//                 if (err) return res.status(500).send("There was a problem finding the user.");
+//                 if (!user) return res.status(404).send("No user found.");
+//
+//                 res.status(200).send(user);
+//             });
+//
+//         });
+//
+//     } catch (e) {
+//         next(e)
+//     }
+// });
 
 
 router.post('/login', async (req, res, next) => {

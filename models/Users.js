@@ -31,7 +31,8 @@ Users.init({
 
     },
     role: {
-        type: Sequelize.ENUM('admin', 'user'),
+        type: Sequelize.STRING,
+        // type: Sequelize.ENUM('admin', 'user'),
         allowNull: true,
         // defaultValue: "user",
     },
