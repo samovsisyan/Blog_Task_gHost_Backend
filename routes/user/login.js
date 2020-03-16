@@ -33,7 +33,10 @@ router.post('/register', function (req, res, next) {
 
         Users.create({
             username: req.body.username,
-            password: req.body.password,
+            password: md5(req.body.password),
+            email: req.body.email,
+            role: req.body.role,
+            img: req.body.img,
 
         });
 
@@ -92,7 +95,12 @@ router.post('/login', async (req, res, next) => {
 
         jwt.verify(token, secret, function (err, decoded) {
             req.session.token = token;
-            return res.status(200).send({auth: true, token: token, user: users});
+
+
+            users.dataValues.token =  token;
+
+            console.log(users);
+            return res.status(200).send({auth: true, user: users  });
         });
 
         res.status(401).send({status: "error"});

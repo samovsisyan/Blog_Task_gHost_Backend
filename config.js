@@ -7,7 +7,7 @@ module.exports = {
         database: 'blog_task_gHost'
     },
     jwtSecret: '01--5152asdsa1d2sa1d5sa',
-    secret: '01--5152asdsa1d2sa1d5sa',
+    secret: '01--5152dsc1trd2sa1d5sa',
 
 
 
