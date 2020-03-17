@@ -5,8 +5,11 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
     try {
-
-        res.render('admin/Adminblog');
+        if (req.session.user) {
+            res.render("/admin/home");
+        }else {
+            res.redirect("/admin/login");
+        }
     } catch (e) {
         next(e)
     }

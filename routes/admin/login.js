@@ -18,18 +18,17 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res) => {
     try {
-        console.log(Users);
         if (!req.body.username || !req.body.password) {
             res.render('login', {message: "Please enter both id and password"});
         } else {
+                const user = await Users.findOne(
+                    {
+                        where: {
+                            username: req.body.username,
+                            password: md5(req.body.password),
+                        }
+                    });
 
-            const user  =  await Users.findOne(
-                {
-                    where: {
-                        username: req.body.username,
-                        password: md5(req.body.password),
-                    }
-                });
 
             if (user) {
                 req.session.user = user;

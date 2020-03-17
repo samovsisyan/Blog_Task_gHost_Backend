@@ -12,8 +12,11 @@ router.get('/', async (req, res, next) => {
                 ['id', 'DESC'],
             ],
         });
-
-        res.render('admin/comments/Home', {comments: comments});
+        if (req.session.user) {
+            res.render('admin/comments/Home', {comments: comments});
+        }else {
+            res.redirect("/admin/login");
+        }
     } catch (e) {
         next(e)
     }
@@ -24,7 +27,11 @@ router.get('/create', async (req, res, next) => {
     try {
 
         const comments = await models.findAll({});
-        res.render('admin/comments/Create', {comments:comments} )
+        if (req.session.user) {
+            res.render('admin/comments/Create', {comments:comments} )
+        }else {
+            res.redirect("/admin/login");
+        }
     } catch (e) {
         next(e)
     }
@@ -44,8 +51,11 @@ router.post('/create', async (req, res, next) => {
             blog_id,
             name,
         });
-
-        res.redirect('/admin/comments')
+        if (req.session.user) {
+            res.redirect('/admin/comments')
+        }else {
+            res.redirect("/admin/login");
+        }
 
     } catch (e) {
         next(e)
@@ -64,64 +74,6 @@ router.get('/delete/:id', async (req, res, next) => {
         next(e)
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// router.get('/update/:id', async (req, res, next) => {
-//     try {
-//         const {id} = req.params;
-//
-//         const comment = await models.findOne({where: {id:id}});
-//         res.render('admin/comment/Update', {comment:comment})
-//     } catch (e) {
-//         next(e)
-//     }
-// });
-
-
-// router.post('/', async (req, res, next) => {
-//     try {
-//         const blog = await models.findOne({});
-//
-//         const {description, user_id, blog_id, name} = req.body;
-//
-//         await models.create({
-//             name,
-//             description,
-//             user_id,
-//             blog_id,
-//         });
-//
-//         res.redirect(`blog/details/${blog.id}`)
-//
-//     } catch (e) {
-//         next(e)
-//
-//     }
-// });
-//
-
 
 
 

@@ -89,7 +89,7 @@ router.post('/login', async (req, res, next) => {
                 password: md5(req.body.password)
             }
         });
-
+        if (users.role == "user") {
         const token = jwt.sign({id: users.id}, secret, {
             expiresIn: 86400 // expires in 24 hours
         });
@@ -102,7 +102,11 @@ router.post('/login', async (req, res, next) => {
 
             console.log(users);
             return res.status(200).send({auth: true, token: token, user: users  });
-        });
+        })
+        }else {
+            return res.status(500).send({auth: "error" });
+
+        }
 
         res.status(401).send({status: "error"});
     } catch (e) {

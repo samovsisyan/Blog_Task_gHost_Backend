@@ -91,18 +91,6 @@ John Doe
                                             Forgot Username / Password?
                                         </Link>
                                     </div>
-                                    <div className="text-center w-full">
-                                        <Link className="txt1" to="/user/signup">
-                                            Create new account
-                                            <i className="fa fa-long-arrow-right"></i>
-                                        </Link>
-                                    </div>
-                                    <div className="text-center w-full">
-                                        <Link className="txt1" to="/blog">
-                                            Back Blog
-                                            <i className="fa fa-long-arrow-right"></i>
-                                        </Link>
-                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -1,8 +1,3 @@
-// module.exports = {
-//   users: require('./users'),
-//   blog: require('./blog'),
-// };
-
 const express = require('express');
 const router = express.Router();
 
@@ -10,9 +5,6 @@ router.use('/blog', require('./blog'));
 router.use('/users', require('./users'));
 router.use('/user', require('./user'));
 
-// router.get('/blog', function(req, res, next) {
-//   res.render('Hello');
-// });
 module.exports = router;
 
 
@@ -52,11 +44,6 @@ router.use('/contact', require('./contact'));
 router.use('/admin/comments', require('./admin/comments'));
 router.use('/comments', require('./comments'));
 
-// router.use('/lang', require('./lang/index'));
-// router.use('/lang/am', require('./lang/am'));
-// router.use('/lang/en', require('./lang/en'));
-// router.use('/lang/ru', require('./lang/ru'));
-// router.use('/lang/ru', require('./lang/ru'));
 
 
 router.get('/', function(req, res, next) {
@@ -67,12 +54,3 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 
 
-// module.exports = {
-//   blog: require('./blog'),
-//   contact: require('./contact'),
-//   home: require('./home'),
-//   profile: require('./profile'),
-//   users: require('./users'),
-//   admin: require('./admin'),
-//
-// };
