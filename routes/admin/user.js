@@ -62,7 +62,6 @@ router.post('/create', async (req, res, next) => {
     }
 });
 
-
 router.get('/update/:id', async (req, res, next) => {
     try {
         const {id} = req.params;
@@ -77,6 +76,71 @@ router.get('/update/:id', async (req, res, next) => {
         next(e)
     }
 });
+
+
+router.post('/update/:id', async (req, res, next) => {
+    try {
+        const {id} = req.params;
+
+        const {
+            username,
+            password,
+            email,
+            img,
+        } = req.body;
+
+        await models.update({
+            username,
+            password,
+            email,
+            img,
+        }, {where: {id: id}});
+        if (req.session.user) {
+
+            res.redirect('/admin/user')
+        }else {
+            res.redirect("/admin/login");
+        }
+    } catch (e) {
+        next(e)
+    }
+});
+
+
+// router.get('/update/:id', async (req, res, next) => {
+//     try {
+//         const {id} = req.params;
+//
+//         const user = await models.findOne({where: {id:id}});
+//         if (req.session.user) {
+//             res.render('admin/user/Update', {user:user})
+//         }else {
+//             res.redirect("/admin/login");
+//         }
+//     } catch (e) {
+//         next(e)
+//     }
+// });
+//
+//
+// router.post('/blog/:id', async (req, res, next) => {
+//     try {
+//         const blogID = req.param('id');
+//         await models.destroy({
+//             where: {
+//                 "id": blogID
+//             }
+//         });
+//         if (req.session.user) {
+//             res.redirect('/admin/blog');
+//         }else {
+//             res.redirect("/admin/login");
+//         }
+//     } catch (e) {
+//         next(e)
+//     }
+// });
+
 
 router.get('/delete/:id', async (req, res, next) => {
     try {

@@ -1,4 +1,5 @@
 module.exports = {
+
     blog: require('./blog'),
     user: require('./user'),
     comments: require('./comments'),
@@ -17,10 +18,18 @@ router.use('/comments', require('./comments'));
 
 
 
-
 router.get('/', function(req, res, next) {
     res.render('Home', { title: 'Express' });
 });
 
 
 module.exports = router;
+
+
+// module.exports = {
+//     comments: require('./comments'),
+//     user: require('./user'),
+//     blog: require('./blog'),
+//     home: require('./home'),
+//     login: require('./login'),
+// };

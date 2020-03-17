@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', async (req, res, next) => {
     try {
         if (req.session.user) {
-            res.render("/admin/home");
+            res.render("/admin/Home");
         }else {
             res.redirect("/admin/login");
         }

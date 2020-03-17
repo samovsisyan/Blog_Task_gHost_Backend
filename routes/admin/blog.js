@@ -81,16 +81,26 @@ router.get('/update/:id', async (req, res, next) => {
 });
 
 
-router.post('/blog/:id', async (req, res, next) => {
+router.post('/update/:id', async (req, res, next) => {
     try {
-        const blogID = req.param('id');
-        await models.destroy({
-            where: {
-                "id": blogID
-            }
-        });
+        const {id} = req.params;
+
+        const {
+            title,
+            description,
+            short_description,
+            img,
+        } = req.body;
+
+        await models.update({
+            title,
+            description,
+            short_description,
+            img,
+        }, {where: {id: id}});
         if (req.session.user) {
-            res.redirect('admin/blog')
+
+        res.redirect('/admin/blog')
         }else {
             res.redirect("/admin/login");
         }
@@ -98,8 +108,6 @@ router.post('/blog/:id', async (req, res, next) => {
         next(e)
     }
 });
-
-
 
 router.get('/delete/:id', async (req, res, next) => {
     try {
