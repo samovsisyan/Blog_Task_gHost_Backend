@@ -30,21 +30,6 @@ router.get('/create', async (req, res, next) => {
     }
 });
 
-
-router.get('/update/:id', async (req, res, next) => {
-    try {
-        const {id} = req.params;
-
-        const blog = await models.findOne({id:id});
-        console.log(blog)
-        res.render('admin/blog/Update', {blog:blog})
-    } catch (e) {
-        next(e)
-    }
-});
-
-
-
 router.post('/create', async (req, res, next) => {
     try {
         // const created_at = new Date();
@@ -69,26 +54,21 @@ router.post('/create', async (req, res, next) => {
 
 
 
-router.post('/update/:id', async (req, res, next) => {
+
+
+
+
+
+
+
+
+router.get('/update/:id', async (req, res, next) => {
     try {
         const {id} = req.params;
 
-        const {
-            title,
-            description,
-            short_description,
-            img,
-        } = req.body;
-
-        await models.update({
-            title,
-            description,
-            short_description,
-            img,
-        }, {where: {id: id}});
-
-        res.redirect('/admin/blog')
-
+        const blog = await models.findOne({where: {id:id}});
+        console.log(blog)
+        res.render('admin/blog/Update', {blog:blog})
     } catch (e) {
         next(e)
     }
@@ -109,17 +89,69 @@ router.post('/blog/:id', async (req, res, next) => {
     }
 });
 
-router.get('/delete/:id', async (req, res, next) => {
-    try {
-        const {id} = req.params;
-        await models.destroy({where: {id: id}});
-        res.redirect('/admin/blog')
 
 
-    } catch (e) {
-        next(e)
-    }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// router.post('/update/:id', async (req, res, next) => {
+//     try {
+//         const {id} = req.params;
+//
+//         const {
+//             title,
+//             description,
+//             short_description,
+//             img,
+//         } = req.body;
+//
+//         await models.update({
+//             title,
+//             description,
+//             short_description,
+//             img,
+//         }, {where: {id: id}});
+//
+//         res.redirect('/admin/blog')
+//
+//     } catch (e) {
+//         next(e)
+//     }
+// });
+
+
+// router.get('/delete/:id', async (req, res, next) => {
+//     try {
+//         const {id} = req.params;
+//         await models.destroy({where: {id: id}});
+//         res.redirect('/admin/blog')
+//
+//
+//     } catch (e) {
+//         next(e)
+//     }
+// });
 
 
 

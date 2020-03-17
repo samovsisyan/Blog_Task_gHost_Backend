@@ -4,8 +4,9 @@ const express = require('express');
 const router = express.Router();
 const {jwtSecret} = require('../../config');
 const {secret} = require('../../config');
-const md5 = require('md5');
 const jwt = require('jsonwebtoken');
+
+const md5 = require('md5');
 
 
 const bcrypt = require('bcryptjs');
@@ -100,7 +101,7 @@ router.post('/login', async (req, res, next) => {
             users.dataValues.token =  token;
 
             console.log(users);
-            return res.status(200).send({auth: true, user: users  });
+            return res.status(200).send({auth: true, token: token, user: users  });
         });
 
         res.status(401).send({status: "error"});
