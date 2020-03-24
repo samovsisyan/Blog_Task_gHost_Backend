@@ -73,24 +73,6 @@ router.get('/details/:id', async (req, res, next) => {
     }
 });
 
-// router.get('/details/:id', async (req, res, next) => {
-//     try {
-//         const {id} = req.params;
-//         console.log(id);
-//         const blog = await models.findByPk(id);
-//
-//
-//         res.json({
-//             status: 'ok',
-//             blog,
-//         });
-//
-//
-//
-//     } catch (e) {
-//         next(e)
-//     }
-// });
 
 
 
