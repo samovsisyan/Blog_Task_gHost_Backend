@@ -65,9 +65,9 @@ class Header extends React.Component {
 
                             <Link to="/contact">Contact</Link>
 
-                            <Link to="/user/signup">Sign Up</Link>
+                            <Link to="/user/signup">Sikkgn Up</Link>
 
-                            <Link to="/user/login">Sign In</Link>
+                            <Link to="/user/signin">Sign In</Link>
 
                         </div>
                         </div>

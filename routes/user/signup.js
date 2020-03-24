@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize');
 const Users = require('../../models/Users');
 const express = require('express');
 const router = express.Router();
@@ -34,10 +33,6 @@ router.post('/', function(req, res){
 
 });
 
-// router.get('/protected_page', checkSignIn, function(req, res){
-//     res.render('user/signup/Protected_page', {username: req.session.user.username})
-// });
-
 router.get('/protected_page', checkSignIn, async (req, res, next) => {
     try {
 
@@ -47,29 +42,5 @@ router.get('/protected_page', checkSignIn, async (req, res, next) => {
         next(e)
     }
 });
-
-
-
-
-
-// app.post('/login', function(req, res){
-//     console.log(Users);
-//     if(!req.body.id || !req.body.password){
-//         res.render('login', {message: "Please enter both id and password"});
-//     } else {
-//         Users.filter(function(user){
-//             if(user.id === req.body.id && user.password === req.body.password){
-//                 req.session.user = user;
-//                 res.redirect('/protected_page');
-//             }
-//         });
-//         res.render('login', {message: "Invalid credentials!"});
-//     }
-// });
-
-
-
-
-
 
 module.exports = router;
